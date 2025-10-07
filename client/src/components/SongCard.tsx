@@ -1,6 +1,4 @@
 import { Song } from "@shared/schema";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
 interface SongCardProps {
@@ -15,15 +13,15 @@ const instrumentIcons: Record<string, string> = {
   vocals: "🎤"
 };
 
-export default function SongCard({ song }: SongCardProps) {
-  const getInitials = (name: string) => {
-    const parts = name.split(" ");
-    if (parts.length >= 2) {
-      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
-    }
-    return name.substring(0, 2).toUpperCase();
-  };
+const instrumentColors: Record<string, string> = {
+  drums: "bg-orange-500/90 text-white",
+  guitar: "bg-purple-500/90 text-white",
+  bass: "bg-blue-500/90 text-white",
+  synth: "bg-pink-500/90 text-white",
+  vocals: "bg-green-500/90 text-white"
+};
 
+export default function SongCard({ song }: SongCardProps) {
   return (
     <div
       className="flex items-center justify-between p-4 rounded-lg border-b last:border-b-0 hover-elevate transition-colors gap-4"
@@ -53,17 +51,11 @@ export default function SongCard({ song }: SongCardProps) {
             {song.musicians.map((musician, index) => (
               <div
                 key={index}
-                className="flex items-center gap-1"
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors[musician.instrument]}`}
                 data-testid={`musician-${song.id}-${index}`}
               >
-                <Avatar className="w-7 h-7">
-                  <AvatarFallback className="text-xs">
-                    {getInitials(musician.name)}
-                  </AvatarFallback>
-                </Avatar>
-                <Badge variant="secondary" className="text-xs">
-                  {instrumentIcons[musician.instrument]} {musician.instrument}
-                </Badge>
+                <span>{instrumentIcons[musician.instrument]}</span>
+                <span>{musician.name}</span>
               </div>
             ))}
           </div>
