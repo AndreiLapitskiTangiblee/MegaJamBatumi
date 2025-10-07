@@ -14,11 +14,11 @@ const instrumentIcons: Record<string, string> = {
 };
 
 const instrumentColors: Record<string, string> = {
-  drums: "bg-orange-500/90 text-white",
-  guitar: "bg-purple-500/90 text-white",
-  bass: "bg-blue-500/90 text-white",
-  synth: "bg-pink-500/90 text-white",
-  vocals: "bg-green-500/90 text-white"
+  vocals: "bg-cyan-500 text-white",
+  guitar: "bg-indigo-500 text-white",
+  bass: "bg-violet-500 text-white",
+  synth: "bg-fuchsia-500 text-white",
+  drums: "bg-rose-500 text-white"
 };
 
 export default function SongCard({ song }: SongCardProps) {
