@@ -18,10 +18,13 @@ export default function BandList() {
           <div className="flex items-start justify-between gap-4 mb-4">
             <div>
               <h1 className="text-4xl font-bold mb-2" data-testid="text-page-title">
-                Rock Bands ({bands.length})
+                Mega Jam Batumi
               </h1>
+              <p className="text-muted-foreground mb-1" data-testid="text-event-date">
+                19 Oct 2025
+              </p>
               <p className="text-muted-foreground" data-testid="text-page-subtitle">
-                Explore legendary rock bands and their iconic songs
+                {bands.length} bands performing
               </p>
             </div>
             <div className="flex items-center gap-2">
