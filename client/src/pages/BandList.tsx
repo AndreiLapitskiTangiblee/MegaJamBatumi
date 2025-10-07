@@ -1,4 +1,4 @@
-import { bands } from "@/data/bands";
+import { bands, getSongsByBandId } from "@/data/bands";
 import BandCard from "@/components/BandCard";
 import { useLocation } from "wouter";
 
@@ -22,6 +22,7 @@ export default function BandList() {
             <BandCard
               key={band.id}
               band={band}
+              songCount={getSongsByBandId(band.id).length}
               onClick={() => setLocation(`/band/${band.id}`)}
             />
           ))}

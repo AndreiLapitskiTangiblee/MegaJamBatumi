@@ -4,13 +4,14 @@ export default function BandCardExample() {
   return (
     <BandCard
       band={{
-        id: "led-zeppelin",
-        name: "Led Zeppelin",
-        formed: 1968,
-        genre: "Hard Rock, Blues Rock",
-        origin: "London, England",
-        description: "Pioneers of hard rock and heavy metal with legendary guitar riffs and powerful vocals"
+        id: "misha-pavlov",
+        name: "Миша Павлов",
+        formed: 2015,
+        genre: "Indie Rock, Alternative",
+        origin: "Moscow, Russia",
+        description: "Contemporary indie sound with poetic Russian lyrics"
       }}
+      songCount={5}
       onClick={() => console.log('Band card clicked')}
     />
   );
