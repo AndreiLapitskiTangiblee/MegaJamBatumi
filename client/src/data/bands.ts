@@ -49,230 +49,357 @@ export const songs: Song[] = [
     id: "mp-1",
     bandId: "misha-pavlov",
     title: "Осенний дождь",
-    album: "Первый альбом",
-    year: 2016,
     duration: "4:12",
-    trackNumber: 1
+    trackNumber: 1,
+    youtubeUrl: "https://youtube.com/watch?v=dQw4w9WgXcQ",
+    musicians: [
+      { name: "Миша", instrument: "vocals" },
+      { name: "Дима", instrument: "guitar" },
+      { name: "Саша", instrument: "bass" },
+      { name: "Игорь", instrument: "drums" }
+    ]
   },
   {
     id: "mp-2",
     bandId: "misha-pavlov",
     title: "Звёзды над городом",
-    album: "Первый альбом",
-    year: 2016,
     duration: "3:45",
-    trackNumber: 2
+    trackNumber: 2,
+    youtubeUrl: "https://youtube.com/watch?v=oHg5SJYRHA0",
+    musicians: [
+      { name: "Миша", instrument: "vocals" },
+      { name: "Дима", instrument: "guitar" },
+      { name: "Катя", instrument: "synth" },
+      { name: "Игорь", instrument: "drums" }
+    ]
   },
   {
     id: "mp-3",
     bandId: "misha-pavlov",
     title: "Тишина",
-    album: "Второй путь",
-    year: 2018,
     duration: "5:20",
-    trackNumber: 3
+    trackNumber: 3,
+    youtubeUrl: "https://youtube.com/watch?v=9bZkp7q19f0",
+    musicians: [
+      { name: "Миша", instrument: "vocals" },
+      { name: "Дима", instrument: "guitar" },
+      { name: "Саша", instrument: "bass" },
+      { name: "Катя", instrument: "synth" }
+    ]
   },
   {
     id: "mp-4",
     bandId: "misha-pavlov",
     title: "Ночная Москва",
-    album: "Второй путь",
-    year: 2018,
     duration: "4:05",
-    trackNumber: 4
+    trackNumber: 4,
+    youtubeUrl: "https://youtube.com/watch?v=kJQP7kiw5Fk",
+    musicians: [
+      { name: "Миша", instrument: "vocals" },
+      { name: "Дима", instrument: "guitar" },
+      { name: "Саша", instrument: "bass" },
+      { name: "Игорь", instrument: "drums" },
+      { name: "Катя", instrument: "synth" }
+    ]
   },
   {
     id: "mp-5",
     bandId: "misha-pavlov",
     title: "Последний снег",
-    album: "Новые горизонты",
-    year: 2020,
     duration: "3:58",
-    trackNumber: 5
+    trackNumber: 5,
+    youtubeUrl: "https://youtube.com/watch?v=L_jWHffIx5E",
+    musicians: [
+      { name: "Миша", instrument: "vocals" },
+      { name: "Дима", instrument: "guitar" },
+      { name: "Игорь", instrument: "drums" }
+    ]
   },
   // Вова и Лиля
   {
     id: "vl-1",
     bandId: "vova-i-lilya",
     title: "Вместе",
-    album: "Наши истории",
-    year: 2019,
     duration: "3:30",
-    trackNumber: 1
+    trackNumber: 1,
+    youtubeUrl: "https://youtube.com/watch?v=fJ9rUzIMcZQ",
+    musicians: [
+      { name: "Вова", instrument: "vocals" },
+      { name: "Лиля", instrument: "vocals" },
+      { name: "Петя", instrument: "guitar" },
+      { name: "Женя", instrument: "bass" }
+    ]
   },
   {
     id: "vl-2",
     bandId: "vova-i-lilya",
     title: "Рассвет",
-    album: "Наши истории",
-    year: 2019,
     duration: "4:15",
-    trackNumber: 2
+    trackNumber: 2,
+    youtubeUrl: "https://youtube.com/watch?v=YQHsXMglC9A",
+    musicians: [
+      { name: "Вова", instrument: "guitar" },
+      { name: "Лиля", instrument: "vocals" },
+      { name: "Петя", instrument: "guitar" },
+      { name: "Макс", instrument: "drums" }
+    ]
   },
   {
     id: "vl-3",
     bandId: "vova-i-lilya",
     title: "Белые ночи",
-    album: "Север",
-    year: 2020,
     duration: "3:42",
-    trackNumber: 3
+    trackNumber: 3,
+    youtubeUrl: "https://youtube.com/watch?v=7wtfhZwyrcc",
+    musicians: [
+      { name: "Вова", instrument: "vocals" },
+      { name: "Лиля", instrument: "synth" },
+      { name: "Петя", instrument: "guitar" },
+      { name: "Женя", instrument: "bass" }
+    ]
   },
   {
     id: "vl-4",
     bandId: "vova-i-lilya",
     title: "Дорога домой",
-    album: "Север",
-    year: 2020,
     duration: "5:10",
-    trackNumber: 4
+    trackNumber: 4,
+    youtubeUrl: "https://youtube.com/watch?v=2Vv-BfVoq4g",
+    musicians: [
+      { name: "Вова", instrument: "guitar" },
+      { name: "Лиля", instrument: "vocals" },
+      { name: "Женя", instrument: "bass" },
+      { name: "Макс", instrument: "drums" }
+    ]
   },
   {
     id: "vl-5",
     bandId: "vova-i-lilya",
     title: "Память",
-    album: "Акустика",
-    year: 2021,
     duration: "4:28",
-    trackNumber: 5
+    trackNumber: 5,
+    youtubeUrl: "https://youtube.com/watch?v=lDK9QqIzhwk",
+    musicians: [
+      { name: "Вова", instrument: "vocals" },
+      { name: "Лиля", instrument: "vocals" },
+      { name: "Петя", instrument: "guitar" }
+    ]
   },
   // Skin To Bone
   {
     id: "stb-1",
     bandId: "skin-to-bone",
     title: "Burn the Sky",
-    album: "Metal Dawn",
-    year: 2013,
     duration: "4:50",
-    trackNumber: 1
+    trackNumber: 1,
+    youtubeUrl: "https://youtube.com/watch?v=hTWKbfoikeg",
+    musicians: [
+      { name: "Marcus", instrument: "vocals" },
+      { name: "Jake", instrument: "guitar" },
+      { name: "Tom", instrument: "bass" },
+      { name: "Lars", instrument: "drums" }
+    ]
   },
   {
     id: "stb-2",
     bandId: "skin-to-bone",
     title: "Razor Edge",
-    album: "Metal Dawn",
-    year: 2013,
     duration: "3:55",
-    trackNumber: 2
+    trackNumber: 2,
+    youtubeUrl: "https://youtube.com/watch?v=cd-J5n7wk7E",
+    musicians: [
+      { name: "Marcus", instrument: "vocals" },
+      { name: "Jake", instrument: "guitar" },
+      { name: "Eric", instrument: "guitar" },
+      { name: "Tom", instrument: "bass" },
+      { name: "Lars", instrument: "drums" }
+    ]
   },
   {
     id: "stb-3",
     bandId: "skin-to-bone",
     title: "Iron Will",
-    album: "Unbreakable",
-    year: 2015,
     duration: "5:22",
-    trackNumber: 3
+    trackNumber: 3,
+    youtubeUrl: "https://youtube.com/watch?v=nfWlot6h_JM",
+    musicians: [
+      { name: "Marcus", instrument: "vocals" },
+      { name: "Jake", instrument: "guitar" },
+      { name: "Tom", instrument: "bass" },
+      { name: "Lars", instrument: "drums" },
+      { name: "Anna", instrument: "synth" }
+    ]
   },
   {
     id: "stb-4",
     bandId: "skin-to-bone",
     title: "Shadow Fighter",
-    album: "Unbreakable",
-    year: 2015,
     duration: "4:38",
-    trackNumber: 4
+    trackNumber: 4,
+    youtubeUrl: "https://youtube.com/watch?v=uelHwf8o7_U",
+    musicians: [
+      { name: "Marcus", instrument: "vocals" },
+      { name: "Eric", instrument: "guitar" },
+      { name: "Tom", instrument: "bass" },
+      { name: "Lars", instrument: "drums" }
+    ]
   },
   {
     id: "stb-5",
     bandId: "skin-to-bone",
     title: "Final Stand",
-    album: "Revolution",
-    year: 2017,
     duration: "6:15",
-    trackNumber: 5
+    trackNumber: 5,
+    youtubeUrl: "https://youtube.com/watch?v=5anLPw0Efmo",
+    musicians: [
+      { name: "Marcus", instrument: "vocals" },
+      { name: "Jake", instrument: "guitar" },
+      { name: "Eric", instrument: "guitar" },
+      { name: "Tom", instrument: "bass" },
+      { name: "Lars", instrument: "drums" }
+    ]
   },
   // Jindiff
   {
     id: "j-1",
     bandId: "jindiff",
     title: "Echoes in the Void",
-    album: "Abstract Horizons",
-    year: 2017,
     duration: "6:45",
-    trackNumber: 1
+    trackNumber: 1,
+    youtubeUrl: "https://youtube.com/watch?v=jfKfPfyJRdk",
+    musicians: [
+      { name: "Pavel", instrument: "guitar" },
+      { name: "Nina", instrument: "synth" },
+      { name: "Milan", instrument: "bass" },
+      { name: "Karel", instrument: "drums" }
+    ]
   },
   {
     id: "j-2",
     bandId: "jindiff",
     title: "Crystalline",
-    album: "Abstract Horizons",
-    year: 2017,
     duration: "5:30",
-    trackNumber: 2
+    trackNumber: 2,
+    youtubeUrl: "https://youtube.com/watch?v=RgKAFK5djSk",
+    musicians: [
+      { name: "Pavel", instrument: "guitar" },
+      { name: "Nina", instrument: "synth" },
+      { name: "Petra", instrument: "vocals" },
+      { name: "Karel", instrument: "drums" }
+    ]
   },
   {
     id: "j-3",
     bandId: "jindiff",
     title: "Urban Drift",
-    album: "City Lights",
-    year: 2019,
     duration: "7:12",
-    trackNumber: 3
+    trackNumber: 3,
+    youtubeUrl: "https://youtube.com/watch?v=Ks-_Mh1QhMc",
+    musicians: [
+      { name: "Pavel", instrument: "guitar" },
+      { name: "Nina", instrument: "synth" },
+      { name: "Milan", instrument: "bass" },
+      { name: "Karel", instrument: "drums" },
+      { name: "Petra", instrument: "vocals" }
+    ]
   },
   {
     id: "j-4",
     bandId: "jindiff",
     title: "Neon Dreams",
-    album: "City Lights",
-    year: 2019,
     duration: "5:58",
-    trackNumber: 4
+    trackNumber: 4,
+    youtubeUrl: "https://youtube.com/watch?v=ZyhrYis509A",
+    musicians: [
+      { name: "Pavel", instrument: "guitar" },
+      { name: "Nina", instrument: "synth" },
+      { name: "Milan", instrument: "bass" }
+    ]
   },
   {
     id: "j-5",
     bandId: "jindiff",
     title: "Infinite Loop",
-    album: "Dimensions",
-    year: 2021,
     duration: "8:20",
-    trackNumber: 5
+    trackNumber: 5,
+    youtubeUrl: "https://youtube.com/watch?v=pt8VYOfr8To",
+    musicians: [
+      { name: "Pavel", instrument: "guitar" },
+      { name: "Nina", instrument: "synth" },
+      { name: "Milan", instrument: "bass" },
+      { name: "Karel", instrument: "drums" }
+    ]
   },
   // Витя
   {
     id: "v-1",
     bandId: "vitya",
     title: "Бунт",
-    album: "Первый удар",
-    year: 2019,
     duration: "2:45",
-    trackNumber: 1
+    trackNumber: 1,
+    youtubeUrl: "https://youtube.com/watch?v=WfGMYdalClU",
+    musicians: [
+      { name: "Витя", instrument: "vocals" },
+      { name: "Олег", instrument: "guitar" },
+      { name: "Артём", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
   },
   {
     id: "v-2",
     bandId: "vitya",
     title: "На улице",
-    album: "Первый удар",
-    year: 2019,
     duration: "3:10",
-    trackNumber: 2
+    trackNumber: 2,
+    youtubeUrl: "https://youtube.com/watch?v=Soa3gO7tL-c",
+    musicians: [
+      { name: "Витя", instrument: "vocals" },
+      { name: "Олег", instrument: "guitar" },
+      { name: "Артём", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
   },
   {
     id: "v-3",
     bandId: "vitya",
     title: "Свобода",
-    album: "Гараж",
-    year: 2020,
     duration: "2:55",
-    trackNumber: 3
+    trackNumber: 3,
+    youtubeUrl: "https://youtube.com/watch?v=SQoA_wjmE9w",
+    musicians: [
+      { name: "Витя", instrument: "vocals" },
+      { name: "Олег", instrument: "guitar" },
+      { name: "Коля", instrument: "drums" }
+    ]
   },
   {
     id: "v-4",
     bandId: "vitya",
     title: "Время перемен",
-    album: "Гараж",
-    year: 2020,
     duration: "3:25",
-    trackNumber: 4
+    trackNumber: 4,
+    youtubeUrl: "https://youtube.com/watch?v=60ItHLz5WEA",
+    musicians: [
+      { name: "Витя", instrument: "vocals" },
+      { name: "Олег", instrument: "guitar" },
+      { name: "Артём", instrument: "bass" },
+      { name: "Андрей", instrument: "synth" },
+      { name: "Коля", instrument: "drums" }
+    ]
   },
   {
     id: "v-5",
     bandId: "vitya",
     title: "Молодость",
-    album: "Живой звук",
-    year: 2021,
     duration: "2:38",
-    trackNumber: 5
+    trackNumber: 5,
+    youtubeUrl: "https://youtube.com/watch?v=8UVNT4wvIGY",
+    musicians: [
+      { name: "Витя", instrument: "vocals" },
+      { name: "Олег", instrument: "guitar" },
+      { name: "Артём", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
   }
 ];
 

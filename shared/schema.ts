@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, integer } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -26,12 +26,17 @@ export interface Band {
   description: string;
 }
 
+export interface Musician {
+  name: string;
+  instrument: "drums" | "guitar" | "bass" | "synth" | "vocals";
+}
+
 export interface Song {
   id: string;
   bandId: string;
   title: string;
-  album: string;
-  year: number;
   duration: string;
   trackNumber: number;
+  youtubeUrl: string;
+  musicians: Musician[];
 }
