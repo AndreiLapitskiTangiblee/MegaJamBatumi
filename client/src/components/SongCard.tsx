@@ -21,7 +21,18 @@ const instrumentColors: Record<string, string> = {
   drums: "bg-rose-500 text-white"
 };
 
+const allInstruments: Array<"vocals" | "guitar" | "bass" | "synth" | "drums"> = [
+  "vocals",
+  "guitar", 
+  "bass",
+  "synth",
+  "drums"
+];
+
 export default function SongCard({ song }: SongCardProps) {
+  const presentInstruments = new Set(song.musicians.map(m => m.instrument));
+  const missingInstruments = allInstruments.filter(inst => !presentInstruments.has(inst));
+
   return (
     <div
       className="flex items-center justify-between p-4 rounded-lg border-b last:border-b-0 hover-elevate transition-colors gap-4"
@@ -56,6 +67,15 @@ export default function SongCard({ song }: SongCardProps) {
               >
                 <span>{instrumentIcons[musician.instrument]}</span>
                 <span>{musician.name}</span>
+              </div>
+            ))}
+            {missingInstruments.map((instrument, index) => (
+              <div
+                key={`missing-${index}`}
+                className="flex items-center justify-center w-8 h-8 rounded-full bg-white dark:bg-gray-900 border-2 border-black dark:border-white text-sm"
+                data-testid={`missing-instrument-${song.id}-${instrument}`}
+              >
+                <span>{instrumentIcons[instrument]}</span>
               </div>
             ))}
           </div>
