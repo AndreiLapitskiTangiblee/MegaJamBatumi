@@ -155,7 +155,7 @@ export const songs: Song[] = [
       { name: "Вова", instrument: "vocals" },
       { name: "Лиля", instrument: "synth" },
       { name: "Петя", instrument: "guitar" },
-      { name: "Женя", instrument: "bass" }
+      { name: "Игорь", instrument: "bass" }
     ]
   },
   {
@@ -197,7 +197,7 @@ export const songs: Song[] = [
       { name: "Marcus", instrument: "vocals" },
       { name: "Jake", instrument: "guitar" },
       { name: "Tom", instrument: "bass" },
-      { name: "Lars", instrument: "drums" }
+      { name: "Макс", instrument: "drums" }
     ]
   },
   {
@@ -212,7 +212,7 @@ export const songs: Song[] = [
       { name: "Jake", instrument: "guitar" },
       { name: "Eric", instrument: "guitar" },
       { name: "Tom", instrument: "bass" },
-      { name: "Lars", instrument: "drums" }
+      { name: "Игорь", instrument: "drums" }
     ]
   },
   {
@@ -226,7 +226,7 @@ export const songs: Song[] = [
       { name: "Marcus", instrument: "vocals" },
       { name: "Jake", instrument: "guitar" },
       { name: "Tom", instrument: "bass" },
-      { name: "Lars", instrument: "drums" },
+      { name: "Макс", instrument: "drums" },
       { name: "Anna", instrument: "synth" }
     ]
   },
@@ -241,7 +241,7 @@ export const songs: Song[] = [
       { name: "Marcus", instrument: "vocals" },
       { name: "Eric", instrument: "guitar" },
       { name: "Tom", instrument: "bass" },
-      { name: "Lars", instrument: "drums" }
+      { name: "Игорь", instrument: "drums" }
     ]
   },
   {
@@ -256,7 +256,7 @@ export const songs: Song[] = [
       { name: "Jake", instrument: "guitar" },
       { name: "Eric", instrument: "guitar" },
       { name: "Tom", instrument: "bass" },
-      { name: "Lars", instrument: "drums" }
+      { name: "Катя", instrument: "synth" }
     ]
   },
   // Jindiff
@@ -409,4 +409,52 @@ export function getBandById(id: string): Band | undefined {
 
 export function getSongsByBandId(bandId: string): Song[] {
   return songs.filter(song => song.bandId === bandId);
+}
+
+export function getSongsByMusicianName(musicianName: string): Song[] {
+  return songs.filter(song => 
+    song.musicians.some(m => m.name === musicianName)
+  );
+}
+
+export function getMusicianInstruments(musicianName: string): string[] {
+  const musicianSongs = getSongsByMusicianName(musicianName);
+  const instruments = new Set<string>();
+  
+  musicianSongs.forEach(song => {
+    song.musicians.forEach(m => {
+      if (m.name === musicianName) {
+        instruments.add(m.instrument);
+      }
+    });
+  });
+  
+  return Array.from(instruments);
+}
+
+export interface SongsByBand {
+  band: Band;
+  songs: Song[];
+}
+
+export function getSongsByMusicianGroupedByBand(musicianName: string): SongsByBand[] {
+  const musicianSongs = getSongsByMusicianName(musicianName);
+  const bandMap = new Map<string, Song[]>();
+  
+  musicianSongs.forEach(song => {
+    if (!bandMap.has(song.bandId)) {
+      bandMap.set(song.bandId, []);
+    }
+    bandMap.get(song.bandId)!.push(song);
+  });
+  
+  const result: SongsByBand[] = [];
+  bandMap.forEach((songs, bandId) => {
+    const band = getBandById(bandId);
+    if (band) {
+      result.push({ band, songs });
+    }
+  });
+  
+  return result;
 }

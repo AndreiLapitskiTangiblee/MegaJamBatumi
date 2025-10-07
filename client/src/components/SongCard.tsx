@@ -1,8 +1,10 @@
 import { Song } from "@shared/schema";
 import { ExternalLink } from "lucide-react";
+import { useLocation } from "wouter";
 
 interface SongCardProps {
   song: Song;
+  onMusicianClick?: (musicianName: string) => void;
 }
 
 const instrumentIcons: Record<string, string> = {
@@ -29,9 +31,19 @@ const allInstruments: Array<"vocals" | "guitar" | "bass" | "synth" | "drums"> = 
   "drums"
 ];
 
-export default function SongCard({ song }: SongCardProps) {
+export default function SongCard({ song, onMusicianClick }: SongCardProps) {
+  const [, setLocation] = useLocation();
   const presentInstruments = new Set(song.musicians.map(m => m.instrument));
   const missingInstruments = allInstruments.filter(inst => !presentInstruments.has(inst));
+
+  const handleMusicianClick = (musicianName: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (onMusicianClick) {
+      onMusicianClick(musicianName);
+    } else {
+      setLocation(`/musician/${encodeURIComponent(musicianName)}`);
+    }
+  };
 
   return (
     <div
@@ -60,14 +72,15 @@ export default function SongCard({ song }: SongCardProps) {
           </div>
           <div className="flex items-center gap-2 mt-2 flex-wrap">
             {song.musicians.map((musician, index) => (
-              <div
+              <button
                 key={index}
-                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors[musician.instrument]}`}
+                onClick={(e) => handleMusicianClick(musician.name, e)}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors[musician.instrument]} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
                 data-testid={`musician-${song.id}-${index}`}
               >
                 <span>{instrumentIcons[musician.instrument]}</span>
                 <span>{musician.name}</span>
-              </div>
+              </button>
             ))}
             {missingInstruments.map((instrument, index) => (
               <div

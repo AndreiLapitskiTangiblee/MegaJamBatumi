@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import BandList from "@/pages/BandList";
 import BandSongs from "@/pages/BandSongs";
+import MusicianSongs from "@/pages/MusicianSongs";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +13,7 @@ function Router() {
     <Switch>
       <Route path="/" component={BandList} />
       <Route path="/band/:id" component={BandSongs} />
+      <Route path="/musician/:name" component={MusicianSongs} />
       <Route component={NotFound} />
     </Switch>
   );
