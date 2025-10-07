@@ -38,5 +38,6 @@ export interface Song {
   duration: string;
   trackNumber: number;
   youtubeUrl: string;
+  tonality: string;
   musicians: Musician[];
 }

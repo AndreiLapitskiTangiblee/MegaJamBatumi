@@ -10,6 +10,7 @@ export default function SongCardExample() {
         duration: "4:12",
         trackNumber: 1,
         youtubeUrl: "https://youtube.com/watch?v=dQw4w9WgXcQ",
+        tonality: "Am",
         musicians: [
           { name: "Миша", instrument: "vocals" },
           { name: "Дима", instrument: "guitar" },

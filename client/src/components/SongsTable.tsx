@@ -31,6 +31,7 @@ export default function SongsTable() {
         <thead>
           <tr className="border-b-2 border-border bg-muted/50">
             <th className="text-left p-3 font-semibold sticky left-0 bg-muted/50 z-10 border-r border-border">Song</th>
+            <th className="text-left p-3 font-semibold min-w-[100px] border-r border-border">Tonality</th>
             <th className="text-left p-3 font-semibold min-w-[100px] border-r border-border">Duration</th>
             <th className="text-center p-3 font-semibold min-w-[80px] border-r border-border">YouTube</th>
             <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
@@ -66,7 +67,7 @@ export default function SongsTable() {
             return (
               <>
                 <tr key={`band-${band.id}`} className="bg-muted/30">
-                  <td colSpan={8} className="p-3 font-semibold sticky left-0 bg-muted/30 z-10">
+                  <td colSpan={9} className="p-3 font-semibold sticky left-0 bg-muted/30 z-10">
                     <div className="flex items-center gap-3">
                       <span className="text-lg">{band.name}</span>
                       <span className="text-sm text-muted-foreground font-normal">
@@ -88,6 +89,9 @@ export default function SongsTable() {
                     >
                       <td className="p-3 sticky left-0 bg-background z-10 border-r border-border">
                         <div className="font-medium">{song.title}</div>
+                      </td>
+                      <td className="p-3 border-r border-border">
+                        <span className="font-mono font-semibold text-primary">{song.tonality}</span>
                       </td>
                       <td className="p-3 text-muted-foreground border-r border-border">{song.duration}</td>
                       <td className="p-3 text-center border-r border-border">

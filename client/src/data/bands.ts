@@ -52,6 +52,7 @@ export const songs: Song[] = [
     duration: "4:12",
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=dQw4w9WgXcQ",
+    tonality: "Am",
     musicians: [
       { name: "Alex", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -66,6 +67,7 @@ export const songs: Song[] = [
     duration: "3:45",
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=oHg5SJYRHA0",
+    tonality: "C",
     musicians: [
       { name: "Alex", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -79,6 +81,7 @@ export const songs: Song[] = [
     duration: "5:20",
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=9bZkp7q19f0",
+    tonality: "Em",
     musicians: [
       { name: "Alex", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -94,6 +97,7 @@ export const songs: Song[] = [
     duration: "4:05",
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=kJQP7kiw5Fk",
+    tonality: "G",
     musicians: [
       { name: "Alex", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -107,6 +111,7 @@ export const songs: Song[] = [
     duration: "3:58",
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=L_jWHffIx5E",
+    tonality: "Dm",
     musicians: [
       { name: "Alex", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -122,6 +127,7 @@ export const songs: Song[] = [
     duration: "3:30",
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=fJ9rUzIMcZQ",
+    tonality: "F",
     musicians: [
       { name: "Morgan", instrument: "vocals" },
       { name: "Casey", instrument: "guitar" },
@@ -135,6 +141,7 @@ export const songs: Song[] = [
     duration: "4:15",
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=YQHsXMglC9A",
+    tonality: "D",
     musicians: [
       { name: "Morgan", instrument: "vocals" },
       { name: "Casey", instrument: "guitar" },
@@ -149,6 +156,7 @@ export const songs: Song[] = [
     duration: "3:42",
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=7wtfhZwyrcc",
+    tonality: "Bm",
     musicians: [
       { name: "Morgan", instrument: "vocals" },
       { name: "Casey", instrument: "synth" },
@@ -163,6 +171,7 @@ export const songs: Song[] = [
     duration: "5:10",
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=2Vv-BfVoq4g",
+    tonality: "A",
     musicians: [
       { name: "Morgan", instrument: "vocals" },
       { name: "Casey", instrument: "guitar" },
@@ -176,6 +185,7 @@ export const songs: Song[] = [
     duration: "4:28",
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=lDK9QqIzhwk",
+    tonality: "E",
     musicians: [
       { name: "Morgan", instrument: "vocals" },
       { name: "Casey", instrument: "guitar" },
@@ -191,6 +201,7 @@ export const songs: Song[] = [
     duration: "4:50",
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=hTWKbfoikeg",
+    tonality: "E",
     musicians: [
       { name: "Avery", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -205,6 +216,7 @@ export const songs: Song[] = [
     duration: "3:55",
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=cd-J5n7wk7E",
+    tonality: "Fm",
     musicians: [
       { name: "Avery", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -220,6 +232,7 @@ export const songs: Song[] = [
     duration: "5:22",
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=nfWlot6h_JM",
+    tonality: "C#m",
     musicians: [
       { name: "Avery", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -234,6 +247,7 @@ export const songs: Song[] = [
     duration: "4:38",
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=uelHwf8o7_U",
+    tonality: "Gm",
     musicians: [
       { name: "Avery", instrument: "vocals" },
       { name: "Riley", instrument: "guitar" },
@@ -248,6 +262,7 @@ export const songs: Song[] = [
     duration: "6:15",
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=5anLPw0Efmo",
+    tonality: "B",
     musicians: [
       { name: "Avery", instrument: "vocals" },
       { name: "Jordan", instrument: "guitar" },
@@ -263,6 +278,7 @@ export const songs: Song[] = [
     duration: "6:45",
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=jfKfPfyJRdk",
+    tonality: "F#m",
     musicians: [
       { name: "Alex", instrument: "guitar" },
       { name: "Casey", instrument: "synth" },
@@ -277,6 +293,7 @@ export const songs: Song[] = [
     duration: "5:30",
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=RgKAFK5djSk",
+    tonality: "Bb",
     musicians: [
       { name: "Alex", instrument: "vocals" },
       { name: "Casey", instrument: "synth" },
@@ -290,6 +307,7 @@ export const songs: Song[] = [
     duration: "7:12",
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=Ks-_Mh1QhMc",
+    tonality: "Eb",
     musicians: [
       { name: "Alex", instrument: "guitar" },
       { name: "Casey", instrument: "synth" },
@@ -304,6 +322,7 @@ export const songs: Song[] = [
     duration: "5:58",
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=ZyhrYis509A",
+    tonality: "Ab",
     musicians: [
       { name: "Alex", instrument: "guitar" },
       { name: "Casey", instrument: "synth" },
@@ -318,6 +337,7 @@ export const songs: Song[] = [
     duration: "8:20",
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=pt8VYOfr8To",
+    tonality: "Cm",
     musicians: [
       { name: "Alex", instrument: "vocals" },
       { name: "Casey", instrument: "synth" },
@@ -332,6 +352,7 @@ export const songs: Song[] = [
     duration: "2:45",
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=WfGMYdalClU",
+    tonality: "A",
     musicians: [
       { name: "Riley", instrument: "vocals" },
       { name: "Sam", instrument: "guitar" },
@@ -346,6 +367,7 @@ export const songs: Song[] = [
     duration: "3:10",
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=Soa3gO7tL-c",
+    tonality: "D",
     musicians: [
       { name: "Riley", instrument: "vocals" },
       { name: "Sam", instrument: "guitar" },
@@ -359,6 +381,7 @@ export const songs: Song[] = [
     duration: "2:55",
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=SQoA_wjmE9w",
+    tonality: "E",
     musicians: [
       { name: "Riley", instrument: "vocals" },
       { name: "Sam", instrument: "guitar" },
@@ -373,6 +396,7 @@ export const songs: Song[] = [
     duration: "3:25",
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=60ItHLz5WEA",
+    tonality: "G",
     musicians: [
       { name: "Riley", instrument: "vocals" },
       { name: "Sam", instrument: "guitar" },
@@ -388,6 +412,7 @@ export const songs: Song[] = [
     duration: "2:38",
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=8UVNT4wvIGY",
+    tonality: "C",
     musicians: [
       { name: "Riley", instrument: "vocals" },
       { name: "Sam", instrument: "guitar" },
