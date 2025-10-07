@@ -2,6 +2,7 @@ import { useState } from "react";
 import { bands, getSongsByBandId } from "@/data/bands";
 import BandCard from "@/components/BandCard";
 import SongsTable from "@/components/SongsTable";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { LayoutGrid, Table } from "lucide-react";
@@ -23,27 +24,30 @@ export default function BandList() {
                 Explore legendary rock bands and their iconic songs
               </p>
             </div>
-            <div className="flex items-center gap-2 bg-muted rounded-lg p-1">
-              <Button
-                variant={viewMode === "cards" ? "secondary" : "ghost"}
-                size="sm"
-                onClick={() => setViewMode("cards")}
-                data-testid="button-view-cards"
-                className="gap-2"
-              >
-                <LayoutGrid className="w-4 h-4" />
-                Cards
-              </Button>
-              <Button
-                variant={viewMode === "table" ? "secondary" : "ghost"}
-                size="sm"
-                onClick={() => setViewMode("table")}
-                data-testid="button-view-table"
-                className="gap-2"
-              >
-                <Table className="w-4 h-4" />
-                Table
-              </Button>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-muted rounded-lg p-1">
+                <Button
+                  variant={viewMode === "cards" ? "secondary" : "ghost"}
+                  size="sm"
+                  onClick={() => setViewMode("cards")}
+                  data-testid="button-view-cards"
+                  className="gap-2"
+                >
+                  <LayoutGrid className="w-4 h-4" />
+                  Cards
+                </Button>
+                <Button
+                  variant={viewMode === "table" ? "secondary" : "ghost"}
+                  size="sm"
+                  onClick={() => setViewMode("table")}
+                  data-testid="button-view-table"
+                  className="gap-2"
+                >
+                  <Table className="w-4 h-4" />
+                  Table
+                </Button>
+              </div>
+              <ThemeToggle />
             </div>
           </div>
         </header>

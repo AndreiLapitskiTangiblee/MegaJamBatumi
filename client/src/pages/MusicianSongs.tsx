@@ -1,6 +1,7 @@
 import { useRoute, useLocation } from "wouter";
 import { getSongsByMusicianGroupedByBand, getMusicianInstruments } from "@/data/bands";
 import SongCard from "@/components/SongCard";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft } from "lucide-react";
@@ -40,15 +41,17 @@ export default function MusicianSongs() {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-8">
-        <Button
-          variant="ghost"
-          onClick={() => window.history.back()}
-          className="mb-6"
-          data-testid="button-back"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back
-        </Button>
+        <div className="flex items-center justify-between mb-6">
+          <Button
+            variant="ghost"
+            onClick={() => window.history.back()}
+            data-testid="button-back"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back
+          </Button>
+          <ThemeToggle />
+        </div>
 
         <header className="mb-8">
           <h1 className="text-3xl font-bold mb-3" data-testid="text-musician-name">

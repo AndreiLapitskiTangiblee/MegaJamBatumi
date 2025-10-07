@@ -59,9 +59,6 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
             <h3 className="text-lg font-medium" data-testid={`text-song-title-${song.id}`}>
               {song.title}
             </h3>
-            <span className="font-mono text-sm font-semibold text-primary" data-testid={`text-song-tonality-${song.id}`}>
-              {song.tonality}
-            </span>
             <a
               href={song.youtubeUrl}
               target="_blank"
@@ -97,8 +94,13 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
           </div>
         </div>
       </div>
-      <div className="text-sm text-muted-foreground flex-shrink-0" data-testid={`text-song-duration-${song.id}`}>
-        {song.duration}
+      <div className="flex items-center gap-3 flex-shrink-0">
+        <span className="font-mono text-sm font-semibold text-primary" data-testid={`text-song-tonality-${song.id}`}>
+          {song.tonality}
+        </span>
+        <span className="text-sm text-muted-foreground" data-testid={`text-song-duration-${song.id}`}>
+          {song.duration}
+        </span>
       </div>
     </div>
   );
