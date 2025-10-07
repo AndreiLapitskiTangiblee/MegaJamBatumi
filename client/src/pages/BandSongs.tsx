@@ -1,0 +1,65 @@
+import { useRoute, useLocation } from "wouter";
+import { getBandById, getSongsByBandId } from "@/data/bands";
+import SongCard from "@/components/SongCard";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+
+export default function BandSongs() {
+  const [, params] = useRoute("/band/:id");
+  const [, setLocation] = useLocation();
+  
+  const bandId = params?.id || "";
+  const band = getBandById(bandId);
+  const songs = getSongsByBandId(bandId);
+
+  if (!band) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Band not found</h1>
+          <Button onClick={() => setLocation("/")} data-testid="button-back">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Bands
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-background">
+      <div className="max-w-4xl mx-auto px-4 md:px-8 py-8">
+        <Button
+          variant="ghost"
+          onClick={() => setLocation("/")}
+          className="mb-6"
+          data-testid="button-back-to-bands"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Bands
+        </Button>
+
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold mb-2" data-testid="text-band-name">
+            {band.name}
+          </h1>
+          <p className="text-muted-foreground mb-4" data-testid="text-band-info">
+            {band.genre} • Formed {band.formed} • {band.origin}
+          </p>
+          <p className="text-base mb-6" data-testid="text-band-description">
+            {band.description}
+          </p>
+          <h2 className="text-xl font-semibold" data-testid="text-songs-count">
+            Songs ({songs.length})
+          </h2>
+        </header>
+
+        <div className="bg-card rounded-lg border border-card-border">
+          {songs.map((song) => (
+            <SongCard key={song.id} song={song} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
