@@ -26,29 +26,29 @@ export default function SongsTable() {
   };
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto border border-border rounded-lg">
       <table className="w-full border-collapse" data-testid="table-songs">
         <thead>
-          <tr className="border-b-2 border-border">
-            <th className="text-left p-3 font-semibold sticky left-0 bg-background z-10">Song</th>
-            <th className="text-left p-3 font-semibold min-w-[100px]">Duration</th>
-            <th className="text-center p-3 font-semibold min-w-[80px]">YouTube</th>
-            <th className="text-left p-3 font-semibold min-w-[150px]">
+          <tr className="border-b-2 border-border bg-muted/50">
+            <th className="text-left p-3 font-semibold sticky left-0 bg-muted/50 z-10 border-r border-border">Song</th>
+            <th className="text-left p-3 font-semibold min-w-[100px] border-r border-border">Duration</th>
+            <th className="text-center p-3 font-semibold min-w-[80px] border-r border-border">YouTube</th>
+            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
               <div className="flex items-center gap-2">
                 {instrumentIcons.vocals} Vocals
               </div>
             </th>
-            <th className="text-left p-3 font-semibold min-w-[150px]">
+            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
               <div className="flex items-center gap-2">
                 {instrumentIcons.guitar} Guitar
               </div>
             </th>
-            <th className="text-left p-3 font-semibold min-w-[150px]">
+            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
               <div className="flex items-center gap-2">
                 {instrumentIcons.bass} Bass
               </div>
             </th>
-            <th className="text-left p-3 font-semibold min-w-[150px]">
+            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
               <div className="flex items-center gap-2">
                 {instrumentIcons.synth} Synth
               </div>
@@ -64,9 +64,9 @@ export default function SongsTable() {
           {bands.map((band) => {
             const bandSongs = songs.filter(s => s.bandId === band.id);
             return (
-              <tbody key={band.id}>
-                <tr className="bg-muted/50">
-                  <td colSpan={8} className="p-3 font-semibold sticky left-0 bg-muted/50 z-10">
+              <>
+                <tr key={`band-${band.id}`} className="bg-muted/30">
+                  <td colSpan={8} className="p-3 font-semibold sticky left-0 bg-muted/30 z-10">
                     <div className="flex items-center gap-3">
                       <span className="text-lg">{band.name}</span>
                       <span className="text-sm text-muted-foreground font-normal">
@@ -86,11 +86,11 @@ export default function SongsTable() {
                       className="border-b border-border hover-elevate"
                       data-testid={`row-song-${song.id}`}
                     >
-                      <td className="p-3 sticky left-0 bg-background z-10">
+                      <td className="p-3 sticky left-0 bg-background z-10 border-r border-border">
                         <div className="font-medium">{song.title}</div>
                       </td>
-                      <td className="p-3 text-muted-foreground">{song.duration}</td>
-                      <td className="p-3 text-center">
+                      <td className="p-3 text-muted-foreground border-r border-border">{song.duration}</td>
+                      <td className="p-3 text-center border-r border-border">
                         <a
                           href={song.youtubeUrl}
                           target="_blank"
@@ -101,7 +101,7 @@ export default function SongsTable() {
                           <ExternalLink className="w-4 h-4" />
                         </a>
                       </td>
-                      <td className="p-3">
+                      <td className="p-3 border-r border-border">
                         {getMusicianForInstrument("vocals") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("vocals")!.name)}
@@ -111,7 +111,7 @@ export default function SongsTable() {
                           </button>
                         )}
                       </td>
-                      <td className="p-3">
+                      <td className="p-3 border-r border-border">
                         {getMusicianForInstrument("guitar") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("guitar")!.name)}
@@ -121,7 +121,7 @@ export default function SongsTable() {
                           </button>
                         )}
                       </td>
-                      <td className="p-3">
+                      <td className="p-3 border-r border-border">
                         {getMusicianForInstrument("bass") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("bass")!.name)}
@@ -131,7 +131,7 @@ export default function SongsTable() {
                           </button>
                         )}
                       </td>
-                      <td className="p-3">
+                      <td className="p-3 border-r border-border">
                         {getMusicianForInstrument("synth") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("synth")!.name)}
@@ -154,7 +154,7 @@ export default function SongsTable() {
                     </tr>
                   );
                 })}
-              </tbody>
+              </>
             );
           })}
         </tbody>
