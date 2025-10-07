@@ -44,7 +44,7 @@ export const bands: Band[] = [
 ];
 
 export const songs: Song[] = [
-  // Миша Павлов
+  // Миша Павлов - Band members: Alex, Jordan, Sam, Taylor
   {
     id: "mp-1",
     bandId: "misha-pavlov",
@@ -53,10 +53,10 @@ export const songs: Song[] = [
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=dQw4w9WgXcQ",
     musicians: [
-      { name: "Миша", instrument: "vocals" },
-      { name: "Дима", instrument: "guitar" },
-      { name: "Саша", instrument: "bass" },
-      { name: "Игорь", instrument: "drums" }
+      { name: "Alex", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -67,10 +67,9 @@ export const songs: Song[] = [
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=oHg5SJYRHA0",
     musicians: [
-      { name: "Миша", instrument: "vocals" },
-      { name: "Дима", instrument: "guitar" },
-      { name: "Катя", instrument: "synth" },
-      { name: "Игорь", instrument: "drums" }
+      { name: "Alex", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Sam", instrument: "synth" }
     ]
   },
   {
@@ -81,10 +80,11 @@ export const songs: Song[] = [
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=9bZkp7q19f0",
     musicians: [
-      { name: "Миша", instrument: "vocals" },
-      { name: "Дима", instrument: "guitar" },
-      { name: "Саша", instrument: "bass" },
-      { name: "Катя", instrument: "synth" }
+      { name: "Alex", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" },
+      { name: "Morgan", instrument: "synth" }
     ]
   },
   {
@@ -95,11 +95,9 @@ export const songs: Song[] = [
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=kJQP7kiw5Fk",
     musicians: [
-      { name: "Миша", instrument: "vocals" },
-      { name: "Дима", instrument: "guitar" },
-      { name: "Саша", instrument: "bass" },
-      { name: "Игорь", instrument: "drums" },
-      { name: "Катя", instrument: "synth" }
+      { name: "Alex", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -110,12 +108,13 @@ export const songs: Song[] = [
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=L_jWHffIx5E",
     musicians: [
-      { name: "Миша", instrument: "vocals" },
-      { name: "Дима", instrument: "guitar" },
-      { name: "Игорь", instrument: "drums" }
+      { name: "Alex", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
-  // Вова и Лиля
+  // Вова и Лиля - Band members: Morgan, Casey, Riley
   {
     id: "vl-1",
     bandId: "vova-i-lilya",
@@ -124,10 +123,9 @@ export const songs: Song[] = [
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=fJ9rUzIMcZQ",
     musicians: [
-      { name: "Вова", instrument: "vocals" },
-      { name: "Лиля", instrument: "vocals" },
-      { name: "Петя", instrument: "guitar" },
-      { name: "Женя", instrument: "bass" }
+      { name: "Morgan", instrument: "vocals" },
+      { name: "Casey", instrument: "guitar" },
+      { name: "Riley", instrument: "bass" }
     ]
   },
   {
@@ -138,10 +136,10 @@ export const songs: Song[] = [
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=YQHsXMglC9A",
     musicians: [
-      { name: "Вова", instrument: "guitar" },
-      { name: "Лиля", instrument: "vocals" },
-      { name: "Петя", instrument: "guitar" },
-      { name: "Макс", instrument: "drums" }
+      { name: "Morgan", instrument: "vocals" },
+      { name: "Casey", instrument: "guitar" },
+      { name: "Riley", instrument: "bass" },
+      { name: "Avery", instrument: "drums" }
     ]
   },
   {
@@ -152,10 +150,10 @@ export const songs: Song[] = [
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=7wtfhZwyrcc",
     musicians: [
-      { name: "Вова", instrument: "vocals" },
-      { name: "Лиля", instrument: "synth" },
-      { name: "Петя", instrument: "guitar" },
-      { name: "Игорь", instrument: "bass" }
+      { name: "Morgan", instrument: "vocals" },
+      { name: "Casey", instrument: "synth" },
+      { name: "Riley", instrument: "bass" },
+      { name: "Avery", instrument: "drums" }
     ]
   },
   {
@@ -166,10 +164,9 @@ export const songs: Song[] = [
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=2Vv-BfVoq4g",
     musicians: [
-      { name: "Вова", instrument: "guitar" },
-      { name: "Лиля", instrument: "vocals" },
-      { name: "Женя", instrument: "bass" },
-      { name: "Макс", instrument: "drums" }
+      { name: "Morgan", instrument: "vocals" },
+      { name: "Casey", instrument: "guitar" },
+      { name: "Riley", instrument: "bass" }
     ]
   },
   {
@@ -180,12 +177,13 @@ export const songs: Song[] = [
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=lDK9QqIzhwk",
     musicians: [
-      { name: "Вова", instrument: "vocals" },
-      { name: "Лиля", instrument: "vocals" },
-      { name: "Петя", instrument: "guitar" }
+      { name: "Morgan", instrument: "vocals" },
+      { name: "Casey", instrument: "guitar" },
+      { name: "Riley", instrument: "bass" },
+      { name: "Avery", instrument: "drums" }
     ]
   },
-  // Skin To Bone
+  // Skin To Bone - Band members: Avery, Jordan, Sam, Taylor, Riley
   {
     id: "stb-1",
     bandId: "skin-to-bone",
@@ -194,10 +192,10 @@ export const songs: Song[] = [
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=hTWKbfoikeg",
     musicians: [
-      { name: "Marcus", instrument: "vocals" },
-      { name: "Jake", instrument: "guitar" },
-      { name: "Tom", instrument: "bass" },
-      { name: "Макс", instrument: "drums" }
+      { name: "Avery", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -208,11 +206,11 @@ export const songs: Song[] = [
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=cd-J5n7wk7E",
     musicians: [
-      { name: "Marcus", instrument: "vocals" },
-      { name: "Jake", instrument: "guitar" },
-      { name: "Eric", instrument: "guitar" },
-      { name: "Tom", instrument: "bass" },
-      { name: "Игорь", instrument: "drums" }
+      { name: "Avery", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Riley", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -223,11 +221,10 @@ export const songs: Song[] = [
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=nfWlot6h_JM",
     musicians: [
-      { name: "Marcus", instrument: "vocals" },
-      { name: "Jake", instrument: "guitar" },
-      { name: "Tom", instrument: "bass" },
-      { name: "Макс", instrument: "drums" },
-      { name: "Anna", instrument: "synth" }
+      { name: "Avery", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -238,10 +235,10 @@ export const songs: Song[] = [
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=uelHwf8o7_U",
     musicians: [
-      { name: "Marcus", instrument: "vocals" },
-      { name: "Eric", instrument: "guitar" },
-      { name: "Tom", instrument: "bass" },
-      { name: "Игорь", instrument: "drums" }
+      { name: "Avery", instrument: "vocals" },
+      { name: "Riley", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -252,14 +249,13 @@ export const songs: Song[] = [
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=5anLPw0Efmo",
     musicians: [
-      { name: "Marcus", instrument: "vocals" },
-      { name: "Jake", instrument: "guitar" },
-      { name: "Eric", instrument: "guitar" },
-      { name: "Tom", instrument: "bass" },
-      { name: "Катя", instrument: "synth" }
+      { name: "Avery", instrument: "vocals" },
+      { name: "Jordan", instrument: "guitar" },
+      { name: "Riley", instrument: "guitar" },
+      { name: "Sam", instrument: "bass" }
     ]
   },
-  // Jindiff
+  // Jindiff - Band members: Alex, Casey, Morgan, Taylor
   {
     id: "j-1",
     bandId: "jindiff",
@@ -268,10 +264,10 @@ export const songs: Song[] = [
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=jfKfPfyJRdk",
     musicians: [
-      { name: "Pavel", instrument: "guitar" },
-      { name: "Nina", instrument: "synth" },
-      { name: "Milan", instrument: "bass" },
-      { name: "Karel", instrument: "drums" }
+      { name: "Alex", instrument: "guitar" },
+      { name: "Casey", instrument: "synth" },
+      { name: "Morgan", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -282,10 +278,9 @@ export const songs: Song[] = [
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=RgKAFK5djSk",
     musicians: [
-      { name: "Pavel", instrument: "guitar" },
-      { name: "Nina", instrument: "synth" },
-      { name: "Petra", instrument: "vocals" },
-      { name: "Karel", instrument: "drums" }
+      { name: "Alex", instrument: "vocals" },
+      { name: "Casey", instrument: "synth" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -296,11 +291,10 @@ export const songs: Song[] = [
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=Ks-_Mh1QhMc",
     musicians: [
-      { name: "Pavel", instrument: "guitar" },
-      { name: "Nina", instrument: "synth" },
-      { name: "Milan", instrument: "bass" },
-      { name: "Karel", instrument: "drums" },
-      { name: "Petra", instrument: "vocals" }
+      { name: "Alex", instrument: "guitar" },
+      { name: "Casey", instrument: "synth" },
+      { name: "Morgan", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -311,9 +305,10 @@ export const songs: Song[] = [
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=ZyhrYis509A",
     musicians: [
-      { name: "Pavel", instrument: "guitar" },
-      { name: "Nina", instrument: "synth" },
-      { name: "Milan", instrument: "bass" }
+      { name: "Alex", instrument: "guitar" },
+      { name: "Casey", instrument: "synth" },
+      { name: "Morgan", instrument: "bass" },
+      { name: "Taylor", instrument: "drums" }
     ]
   },
   {
@@ -324,13 +319,12 @@ export const songs: Song[] = [
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=pt8VYOfr8To",
     musicians: [
-      { name: "Pavel", instrument: "guitar" },
-      { name: "Nina", instrument: "synth" },
-      { name: "Milan", instrument: "bass" },
-      { name: "Karel", instrument: "drums" }
+      { name: "Alex", instrument: "vocals" },
+      { name: "Casey", instrument: "synth" },
+      { name: "Morgan", instrument: "bass" }
     ]
   },
-  // Витя
+  // Витя - Band members: Riley, Sam, Jordan, Alex
   {
     id: "v-1",
     bandId: "vitya",
@@ -339,10 +333,10 @@ export const songs: Song[] = [
     trackNumber: 1,
     youtubeUrl: "https://youtube.com/watch?v=WfGMYdalClU",
     musicians: [
-      { name: "Витя", instrument: "vocals" },
-      { name: "Олег", instrument: "guitar" },
-      { name: "Артём", instrument: "bass" },
-      { name: "Коля", instrument: "drums" }
+      { name: "Riley", instrument: "vocals" },
+      { name: "Sam", instrument: "guitar" },
+      { name: "Jordan", instrument: "bass" },
+      { name: "Alex", instrument: "drums" }
     ]
   },
   {
@@ -353,10 +347,9 @@ export const songs: Song[] = [
     trackNumber: 2,
     youtubeUrl: "https://youtube.com/watch?v=Soa3gO7tL-c",
     musicians: [
-      { name: "Витя", instrument: "vocals" },
-      { name: "Олег", instrument: "guitar" },
-      { name: "Артём", instrument: "bass" },
-      { name: "Коля", instrument: "drums" }
+      { name: "Riley", instrument: "vocals" },
+      { name: "Sam", instrument: "guitar" },
+      { name: "Jordan", instrument: "bass" }
     ]
   },
   {
@@ -367,9 +360,10 @@ export const songs: Song[] = [
     trackNumber: 3,
     youtubeUrl: "https://youtube.com/watch?v=SQoA_wjmE9w",
     musicians: [
-      { name: "Витя", instrument: "vocals" },
-      { name: "Олег", instrument: "guitar" },
-      { name: "Коля", instrument: "drums" }
+      { name: "Riley", instrument: "vocals" },
+      { name: "Sam", instrument: "guitar" },
+      { name: "Jordan", instrument: "bass" },
+      { name: "Alex", instrument: "drums" }
     ]
   },
   {
@@ -380,11 +374,11 @@ export const songs: Song[] = [
     trackNumber: 4,
     youtubeUrl: "https://youtube.com/watch?v=60ItHLz5WEA",
     musicians: [
-      { name: "Витя", instrument: "vocals" },
-      { name: "Олег", instrument: "guitar" },
-      { name: "Артём", instrument: "bass" },
-      { name: "Андрей", instrument: "synth" },
-      { name: "Коля", instrument: "drums" }
+      { name: "Riley", instrument: "vocals" },
+      { name: "Sam", instrument: "guitar" },
+      { name: "Jordan", instrument: "bass" },
+      { name: "Morgan", instrument: "synth" },
+      { name: "Alex", instrument: "drums" }
     ]
   },
   {
@@ -395,10 +389,10 @@ export const songs: Song[] = [
     trackNumber: 5,
     youtubeUrl: "https://youtube.com/watch?v=8UVNT4wvIGY",
     musicians: [
-      { name: "Витя", instrument: "vocals" },
-      { name: "Олег", instrument: "guitar" },
-      { name: "Артём", instrument: "bass" },
-      { name: "Коля", instrument: "drums" }
+      { name: "Riley", instrument: "vocals" },
+      { name: "Sam", instrument: "guitar" },
+      { name: "Jordan", instrument: "bass" },
+      { name: "Alex", instrument: "drums" }
     ]
   }
 ];
