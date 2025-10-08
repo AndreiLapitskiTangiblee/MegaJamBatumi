@@ -59,18 +59,22 @@ export default function BandList() {
 
         {viewMode === "cards" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {bands.map((band) => {
+            {bands.map((band, index) => {
               const bandSongs = getSongsByBandId(band.id);
               const backgroundImage = getBandBackgroundImage(band.id);
               return (
-                <BandCard
-                  key={band.id}
-                  band={band}
-                  songCount={bandSongs.length}
-                  totalDuration={getTotalDuration(bandSongs)}
-                  backgroundImage={backgroundImage}
-                  onClick={() => setLocation(`/band/${band.id}`)}
-                />
+                <div key={band.id} className="relative">
+                  <div className="absolute -left-2 -top-2 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-base font-bold z-10 shadow-lg">
+                    {index + 1}
+                  </div>
+                  <BandCard
+                    band={band}
+                    songCount={bandSongs.length}
+                    totalDuration={getTotalDuration(bandSongs)}
+                    backgroundImage={backgroundImage}
+                    onClick={() => setLocation(`/band/${band.id}`)}
+                  />
+                </div>
               );
             })}
           </div>
