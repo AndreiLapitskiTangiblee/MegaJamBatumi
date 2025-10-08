@@ -90,7 +90,7 @@ export default function SongsTable() {
                       className="border-b border-border hover-elevate"
                       data-testid={`row-song-${song.id}`}
                     >
-                      <td className="p-2 sm:p-3 sticky left-0 bg-background z-10 border-r border-border">
+                      <td className="p-2 sm:p-3 sticky left-0 bg-card z-10 border-r border-border">
                         <div className="font-medium text-sm sm:text-base">{song.title}</div>
                       </td>
                       <td className="p-2 sm:p-3 border-r border-border">
