@@ -1,5 +1,5 @@
 import React from "react";
-import { bands, songs } from "@/data/bands";
+import { useBandsData } from "@/hooks/useBandsData";
 import { FaYoutube } from "react-icons/fa";
 import { useLocation } from "wouter";
 import { getMusicianColor } from "@/data/bands";
@@ -22,10 +22,24 @@ const instrumentColors: Record<string, string> = {
 
 export default function SongsTable() {
   const [, setLocation] = useLocation();
+  const { data, isLoading } = useBandsData();
 
   const handleMusicianClick = (musicianName: string) => {
     setLocation(`/musician/${encodeURIComponent(musicianName)}`);
   };
+
+  const bands = data?.bands || [];
+  const songs = data?.songs || [];
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center py-12">
+        <div className="text-center">
+          <div className="text-lg text-muted-foreground">Loading...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="overflow-x-auto border border-border rounded-lg">

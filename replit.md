@@ -64,7 +64,7 @@ Preferred communication style: Simple, everyday language.
 **Data Relationships**
 - Songs belong to Bands (one-to-many)
 - Musicians are assigned to Songs with specific instruments (many-to-many)
-- Currently stored in TypeScript files (`client/src/data/bands.ts`)
+- Data is dynamically loaded from external API (https://mega-jam.pages.dev/js/requests/requests.js)
 
 ### Routing & Navigation
 
@@ -119,7 +119,23 @@ Preferred communication style: Simple, everyday language.
 - **date-fns** - Date manipulation utilities
 
 ### Third-Party Integrations
+- **External Data API** - Band and song data loaded from https://mega-jam.pages.dev/js/requests/requests.js
+  - JavaScript module format parsed using Function constructor
+  - Cached for 5 minutes using React Query
+  - Handles 21 bands with complete song and musician data
 - **YouTube** - External links to song videos (no API integration, just URLs)
 - **Google Fonts** - Inter font family for typography
 - No authentication service (prepared but not implemented)
-- No external APIs currently consumed
+
+## Recent Changes
+
+### Dynamic Data Loading (Latest)
+- **Removed static data** - Eliminated hardcoded band/song data
+- **External API integration** - Now fetches live data from https://mega-jam.pages.dev/js/requests/requests.js
+- **Parser implementation** - Uses Function constructor to safely execute JavaScript module and extract data
+- **React Query integration** - Custom `useBandsData()` hook with 5-minute caching
+- **Data transformation** - Converts API format to internal Band and Song types
+- **Loading states** - Shows loading indicators while fetching data
+- **View mode persistence** - Card/Table view preference saved in localStorage
+- **Scroll position memory** - Restores scroll position when returning to bands list
+- **Navigation behavior** - Band detail pages always scroll to top on load

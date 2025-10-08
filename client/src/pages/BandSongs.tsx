@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRoute, useLocation } from "wouter";
-import { getBandById, getSongsByBandId } from "@/data/bands";
+import { useBandsData } from "@/hooks/useBandsData";
 import SongCard from "@/components/SongCard";
 import ThemeToggle from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
@@ -9,15 +9,26 @@ import { ArrowLeft } from "lucide-react";
 export default function BandSongs() {
   const [, params] = useRoute("/band/:id");
   const [, setLocation] = useLocation();
+  const { data, isLoading } = useBandsData();
   
   const bandId = params?.id || "";
-  const band = getBandById(bandId);
-  const songs = getSongsByBandId(bandId);
+  const band = data?.bands.find(b => b.id === bandId);
+  const songs = data?.songs.filter(s => s.bandId === bandId) || [];
 
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-lg text-muted-foreground">Loading...</div>
+        </div>
+      </div>
+    );
+  }
 
   if (!band) {
     return (

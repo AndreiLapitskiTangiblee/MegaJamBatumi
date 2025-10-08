@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { bands, getSongsByBandId, getAllSongsTotalDuration, songs, getTotalDuration, getBandBackgroundImage } from "@/data/bands";
+import { useBandsData } from "@/hooks/useBandsData";
+import { getBandBackgroundImage } from "@/data/bands";
 import BandCard from "@/components/BandCard";
 import SongsTable from "@/components/SongsTable";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -10,8 +11,26 @@ import { LayoutGrid, Table } from "lucide-react";
 const SCROLL_POSITION_KEY = "bandListScrollPosition";
 const VIEW_MODE_KEY = "bandListViewMode";
 
+function formatDuration(totalMinutes: number): string {
+  const hours = Math.floor(totalMinutes / 60);
+  const mins = totalMinutes % 60;
+  if (hours > 0) {
+    return `${hours}h ${mins}m`;
+  }
+  return `${mins}m`;
+}
+
+function parseDuration(duration: string): number {
+  const parts = duration.split(':');
+  if (parts.length === 2) {
+    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+  }
+  return 0;
+}
+
 export default function BandList() {
   const [, setLocation] = useLocation();
+  const { data, isLoading } = useBandsData();
   
   // Initialize view mode from localStorage or default to "cards"
   const [viewMode, setViewMode] = useState<"cards" | "table">(() => {
@@ -19,7 +38,11 @@ export default function BandList() {
     return (saved === "cards" || saved === "table") ? saved : "cards";
   });
   
-  const totalDuration = getAllSongsTotalDuration();
+  const bands = data?.bands || [];
+  const songs = data?.songs || [];
+  
+  const totalDurationSeconds = songs.reduce((acc, song) => acc + parseDuration(song.duration), 0);
+  const totalDuration = formatDuration(Math.floor(totalDurationSeconds / 60));
   const totalSongs = songs.length;
 
   // Save view mode to localStorage whenever it changes
@@ -135,17 +158,26 @@ export default function BandList() {
           </div>
         </header>
 
-        {viewMode === "cards" ? (
+        {isLoading ? (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-center">
+              <div className="text-lg text-muted-foreground">Loading bands...</div>
+            </div>
+          </div>
+        ) : viewMode === "cards" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {bands.map((band, index) => {
-              const bandSongs = getSongsByBandId(band.id);
+              const bandSongs = songs.filter(s => s.bandId === band.id);
               const backgroundImage = getBandBackgroundImage(band.id);
+              const bandDurationSeconds = bandSongs.reduce((acc, song) => acc + parseDuration(song.duration), 0);
+              const bandDuration = formatDuration(Math.floor(bandDurationSeconds / 60));
+              
               return (
                 <BandCard
                   key={band.id}
                   band={band}
                   songCount={bandSongs.length}
-                  totalDuration={getTotalDuration(bandSongs)}
+                  totalDuration={bandDuration}
                   backgroundImage={backgroundImage}
                   sequenceNumber={index + 1}
                   onClick={() => setLocation(`/band/${band.id}`)}
