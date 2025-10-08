@@ -42,28 +42,28 @@ export const bands: Band[] = [
     description: "Pop and soul performer"
   },
   {
-    id: "1",
-    name: "Варя",
-    genre: "Various",
+    id: "9",
+    name: "Давут",
+    genre: "Alternative Rock",
     formed: 2023,
     origin: "Batumi, Georgia",
-    description: "Performer"
+    description: "Skin To Bone original music"
   },
   {
-    id: "2",
-    name: "Артем",
-    genre: "Various",
+    id: "12",
+    name: "Маша",
+    genre: "Metal / Hard Rock",
     formed: 2023,
     origin: "Batumi, Georgia",
-    description: "Performer"
+    description: "80s metal and rock classics"
   },
   {
-    id: "3",
-    name: "Alexa",
-    genre: "Various",
+    id: "18",
+    name: "Mikhail",
+    genre: "Blues / Rock",
     formed: 2023,
     origin: "Batumi, Georgia",
-    description: "Performer"
+    description: "Classic rock and blues covers"
   }
 ];
 
@@ -78,6 +78,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
       { name: "Миша Павлов", instrument: "guitar" }
     ]
   },
@@ -90,6 +91,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
       { name: "Миша Павлов", instrument: "guitar" }
     ]
   },
@@ -102,6 +104,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
       { name: "Миша Павлов", instrument: "guitar" }
     ]
   },
@@ -114,6 +117,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
       { name: "Миша Павлов", instrument: "guitar" }
     ]
   },
@@ -126,6 +130,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
       { name: "Миша Павлов", instrument: "guitar" }
     ]
   },
@@ -347,45 +352,296 @@ export const songs: Song[] = [
       { name: "Миша", instrument: "drums" }
     ]
   },
-
-  // Варя - placeholder with one song
   {
-    id: "1-1",
-    bandId: "1",
-    trackNumber: 1,
-    title: "TBD",
-    duration: "3:00",
+    id: "8-3",
+    bandId: "8",
+    trackNumber: 3,
+    title: "Beth Hart - Your Heart Is As Black As Night",
+    duration: "4:15",
     youtubeUrl: "#",
-    tonality: "-",
+    tonality: "Cm",
     musicians: [
-      { name: "Арт", instrument: "synth" }
+      { name: "Lera Rawlick", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Арт", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Миша", instrument: "drums" }
+    ]
+  },
+  {
+    id: "8-4",
+    bandId: "8",
+    trackNumber: 4,
+    title: "Ray Charles - Hit The Road Jack",
+    duration: "2:00",
+    youtubeUrl: "#",
+    tonality: "Am",
+    musicians: [
+      { name: "Lera Rawlick", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Арт", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Миша", instrument: "drums" }
+    ]
+  },
+  {
+    id: "8-5",
+    bandId: "8",
+    trackNumber: 5,
+    title: "Beatles - Let It Be",
+    duration: "4:03",
+    youtubeUrl: "#",
+    tonality: "C",
+    musicians: [
+      { name: "Lera Rawlick", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Арт", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Миша", instrument: "drums" }
     ]
   },
 
-  // Артем - placeholder with one song
+  // Давут (Skin To Bone originals)
   {
-    id: "2-1",
-    bandId: "2",
+    id: "9-1",
+    bandId: "9",
     trackNumber: 1,
-    title: "TBD",
-    duration: "3:00",
+    title: "Skin To Bone - Lost in Disguise",
+    duration: "3:45",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
-      { name: "Арт", instrument: "synth" }
+      { name: "Давут", instrument: "vocals" },
+      { name: "Jindiff", instrument: "vocals" },
+      { name: "Арсений", instrument: "guitar" },
+      { name: "Аня", instrument: "bass" },
+      { name: "Варя", instrument: "drums" }
+    ]
+  },
+  {
+    id: "9-2",
+    bandId: "9",
+    trackNumber: 2,
+    title: "Skin To Bone - ICAN'TSLEEP",
+    duration: "3:20",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Давут", instrument: "vocals" },
+      { name: "Jindiff", instrument: "vocals" },
+      { name: "Арсений", instrument: "guitar" },
+      { name: "Аня", instrument: "bass" },
+      { name: "Варя", instrument: "drums" }
+    ]
+  },
+  {
+    id: "9-3",
+    bandId: "9",
+    trackNumber: 3,
+    title: "Skin To Bone - No Way Back",
+    duration: "4:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Давут", instrument: "vocals" },
+      { name: "Jindiff", instrument: "vocals" },
+      { name: "Арсений", instrument: "guitar" },
+      { name: "Аня", instrument: "bass" },
+      { name: "Варя", instrument: "drums" }
+    ]
+  },
+  {
+    id: "9-4",
+    bandId: "9",
+    trackNumber: 4,
+    title: "Skin To Bone - From The Ashes Of Hope",
+    duration: "3:55",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Давут", instrument: "vocals" },
+      { name: "Jindiff", instrument: "vocals" },
+      { name: "Арсений", instrument: "guitar" },
+      { name: "Аня", instrument: "bass" },
+      { name: "Варя", instrument: "drums" }
+    ]
+  },
+  {
+    id: "9-5",
+    bandId: "9",
+    trackNumber: 5,
+    title: "Skin To Bone - Leeches",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Давут", instrument: "vocals" },
+      { name: "Jindiff", instrument: "vocals" },
+      { name: "Арсений", instrument: "guitar" },
+      { name: "Аня", instrument: "bass" },
+      { name: "Варя", instrument: "drums" }
     ]
   },
 
-  // Alexa - placeholder with one song
+  // Маша
   {
-    id: "3-1",
-    bandId: "3",
+    id: "12-1",
+    bandId: "12",
     trackNumber: 1,
-    title: "TBD",
-    duration: "3:00",
+    title: "W.A.S.P. - I Wanna Be Somebody",
+    duration: "3:45",
+    youtubeUrl: "https://www.youtube.com/watch?v=LA3ID178XLE",
+    tonality: "-",
+    musicians: [
+      { name: "Маша", instrument: "vocals" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Илья", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+  {
+    id: "12-2",
+    bandId: "12",
+    trackNumber: 2,
+    title: "W.A.S.P. - Sleeping (In The Fire)",
+    duration: "3:55",
+    youtubeUrl: "https://www.youtube.com/watch?v=fxgX1VqnP14",
+    tonality: "+1",
+    musicians: [
+      { name: "Маша", instrument: "vocals" },
+      { name: "Jene", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Илья", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+  {
+    id: "12-3",
+    bandId: "12",
+    trackNumber: 3,
+    title: "Skid Row - Big Guns",
+    duration: "3:37",
+    youtubeUrl: "https://www.youtube.com/watch?v=Bh5MzIQrkBo",
+    tonality: "-",
+    musicians: [
+      { name: "Маша", instrument: "vocals" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Илья", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+  {
+    id: "12-4",
+    bandId: "12",
+    trackNumber: 4,
+    title: "Ария - Возьми мое сердце",
+    duration: "5:15",
+    youtubeUrl: "https://www.youtube.com/watch?v=MTuS78tqkkY",
+    tonality: "-",
+    musicians: [
+      { name: "Маша", instrument: "vocals" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Jene", instrument: "guitar" },
+      { name: "Илья", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+  {
+    id: "12-5",
+    bandId: "12",
+    trackNumber: 5,
+    title: "Slaughter - Get Used To It",
+    duration: "3:15",
+    youtubeUrl: "https://www.youtube.com/watch?v=r2ZzWL2blP0",
+    tonality: "-",
+    musicians: [
+      { name: "Маша", instrument: "vocals" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Илья", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+
+  // Mikhail
+  {
+    id: "18-1",
+    bandId: "18",
+    trackNumber: 1,
+    title: "Gary Clark Jr. - Come Together",
+    duration: "4:20",
     youtubeUrl: "#",
     tonality: "-",
-    musicians: []
+    musicians: [
+      { name: "Mikhail", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Юра", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Дима", instrument: "drums" }
+    ]
+  },
+  {
+    id: "18-2",
+    bandId: "18",
+    trackNumber: 2,
+    title: "Pink Floyd - Another Brick In The Wall",
+    duration: "3:59",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Mikhail", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Юра", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Дима", instrument: "drums" }
+    ]
+  },
+  {
+    id: "18-3",
+    bandId: "18",
+    trackNumber: 3,
+    title: "ZZ Top - La Grange",
+    duration: "3:51",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Mikhail", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Юра", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Дима", instrument: "drums" }
+    ]
+  },
+  {
+    id: "18-4",
+    bandId: "18",
+    trackNumber: 4,
+    title: "Sting - Shape Of My Heart",
+    duration: "4:38",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Mikhail", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Юра", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Дима", instrument: "drums" }
+    ]
+  },
+  {
+    id: "18-5",
+    bandId: "18",
+    trackNumber: 5,
+    title: "Joe Cocker - You Can Leave Your Head On",
+    duration: "4:23",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Mikhail", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Юра", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Дима", instrument: "drums" }
+    ]
   }
 ];
 
