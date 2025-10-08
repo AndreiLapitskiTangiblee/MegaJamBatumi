@@ -17,39 +17,83 @@ export default function BandList() {
     <div className="min-h-screen bg-background">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 py-4 sm:py-8">
         <header className="mb-6 sm:mb-8">
-          <div className="flex items-start justify-between gap-2 sm:gap-4 mb-4">
-            <div className="min-w-0 flex-1">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2" data-testid="text-page-title">
-                Mega Jam Batumi
-              </h1>
-              <p className="text-sm sm:text-base text-muted-foreground mb-1" data-testid="text-event-date">
-                19 Oct 2025
-              </p>
-              <p className="text-sm sm:text-base text-muted-foreground" data-testid="text-page-subtitle">
-                {bands.length} bands • {totalSongs} songs • {totalDuration}
-              </p>
-            </div>
-            <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+          {/* Mobile layout */}
+          <div className="sm:hidden space-y-3 mb-4">
+            {/* Row 1: Title centered */}
+            <h1 className="text-2xl font-bold text-center" data-testid="text-page-title">
+              Mega Jam Batumi
+            </h1>
+            
+            {/* Row 2: View toggle left, theme toggle right */}
+            <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-1 bg-muted rounded-lg p-1">
                 <Button
                   variant={viewMode === "cards" ? "secondary" : "ghost"}
                   size="sm"
                   onClick={() => setViewMode("cards")}
                   data-testid="button-view-cards"
-                  className="gap-1 sm:gap-2 px-2 sm:px-3"
+                  className="gap-1 px-2"
                 >
                   <LayoutGrid className="w-4 h-4" />
-                  <span className="hidden sm:inline">Cards</span>
                 </Button>
                 <Button
                   variant={viewMode === "table" ? "secondary" : "ghost"}
                   size="sm"
                   onClick={() => setViewMode("table")}
                   data-testid="button-view-table"
-                  className="gap-1 sm:gap-2 px-2 sm:px-3"
+                  className="gap-1 px-2"
                 >
                   <Table className="w-4 h-4" />
-                  <span className="hidden sm:inline">Table</span>
+                </Button>
+              </div>
+              <ThemeToggle />
+            </div>
+            
+            {/* Row 3: Everything else */}
+            <div className="text-center space-y-1">
+              <p className="text-sm text-muted-foreground" data-testid="text-event-date">
+                19 Oct 2025
+              </p>
+              <p className="text-sm text-muted-foreground" data-testid="text-page-subtitle">
+                {bands.length} bands • {totalSongs} songs • {totalDuration}
+              </p>
+            </div>
+          </div>
+
+          {/* Desktop layout */}
+          <div className="hidden sm:flex items-start justify-between gap-4 mb-4">
+            <div className="min-w-0 flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold mb-2" data-testid="text-page-title">
+                Mega Jam Batumi
+              </h1>
+              <p className="text-base text-muted-foreground mb-1" data-testid="text-event-date">
+                19 Oct 2025
+              </p>
+              <p className="text-base text-muted-foreground" data-testid="text-page-subtitle">
+                {bands.length} bands performing • {totalSongs} songs • {totalDuration}
+              </p>
+            </div>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <div className="flex items-center gap-1 bg-muted rounded-lg p-1">
+                <Button
+                  variant={viewMode === "cards" ? "secondary" : "ghost"}
+                  size="sm"
+                  onClick={() => setViewMode("cards")}
+                  data-testid="button-view-cards"
+                  className="gap-2 px-3"
+                >
+                  <LayoutGrid className="w-4 h-4" />
+                  <span>Cards</span>
+                </Button>
+                <Button
+                  variant={viewMode === "table" ? "secondary" : "ghost"}
+                  size="sm"
+                  onClick={() => setViewMode("table")}
+                  data-testid="button-view-table"
+                  className="gap-2 px-3"
+                >
+                  <Table className="w-4 h-4" />
+                  <span>Table</span>
                 </Button>
               </div>
               <ThemeToggle />
