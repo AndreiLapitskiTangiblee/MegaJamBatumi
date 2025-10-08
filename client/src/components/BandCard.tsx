@@ -15,7 +15,7 @@ interface BandCardProps {
 export default function BandCard({ band, songCount, totalDuration, backgroundImage, sequenceNumber, onClick }: BandCardProps) {
   return (
     <Card
-      className="p-6 cursor-pointer hover-elevate active-elevate-2 transition-transform hover:scale-[1.02] relative overflow-hidden"
+      className="p-4 sm:p-6 cursor-pointer hover-elevate active-elevate-2 transition-transform hover:scale-[1.02] relative overflow-hidden"
       onClick={onClick}
       data-testid={`card-band-${band.id}`}
     >
@@ -26,25 +26,25 @@ export default function BandCard({ band, songCount, totalDuration, backgroundIma
         />
       )}
       <div className="relative z-10">
-        <div className="flex items-start justify-between gap-3 mb-2">
+        <div className="flex items-start justify-between gap-2 sm:gap-3 mb-2">
           {sequenceNumber && (
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-muted text-muted-foreground text-sm font-semibold flex-shrink-0">
+            <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-muted text-muted-foreground text-xs sm:text-sm font-semibold flex-shrink-0">
               {sequenceNumber}
             </div>
           )}
-          <h2 className="text-2xl font-semibold flex-1" data-testid={`text-band-name-${band.id}`}>
+          <h2 className="text-lg sm:text-2xl font-semibold flex-1 min-w-0" data-testid={`text-band-name-${band.id}`}>
             {band.name}
           </h2>
-          <Badge variant="secondary" data-testid={`badge-song-count-${band.id}`}>
+          <Badge variant="secondary" className="text-xs sm:text-sm whitespace-nowrap" data-testid={`badge-song-count-${band.id}`}>
             {songCount} songs
           </Badge>
         </div>
         <div className="space-y-2">
-          <p className="text-base" data-testid={`text-band-description-${band.id}`}>
+          <p className="text-sm sm:text-base" data-testid={`text-band-description-${band.id}`}>
             {band.description}
           </p>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Clock className="w-4 h-4" />
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+            <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
             <span data-testid={`text-band-duration-${band.id}`}>{totalDuration}</span>
           </div>
         </div>
