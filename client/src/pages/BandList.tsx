@@ -8,12 +8,24 @@ import { useLocation } from "wouter";
 import { LayoutGrid, Table } from "lucide-react";
 
 const SCROLL_POSITION_KEY = "bandListScrollPosition";
+const VIEW_MODE_KEY = "bandListViewMode";
 
 export default function BandList() {
   const [, setLocation] = useLocation();
-  const [viewMode, setViewMode] = useState<"cards" | "table">("cards");
+  
+  // Initialize view mode from localStorage or default to "cards"
+  const [viewMode, setViewMode] = useState<"cards" | "table">(() => {
+    const saved = localStorage.getItem(VIEW_MODE_KEY);
+    return (saved === "cards" || saved === "table") ? saved : "cards";
+  });
+  
   const totalDuration = getAllSongsTotalDuration();
   const totalSongs = songs.length;
+
+  // Save view mode to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem(VIEW_MODE_KEY, viewMode);
+  }, [viewMode]);
 
   // Restore scroll position when component mounts
   useEffect(() => {
