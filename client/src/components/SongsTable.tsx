@@ -1,3 +1,4 @@
+import React from "react";
 import { bands, songs } from "@/data/bands";
 import { FaYoutube } from "react-icons/fa";
 import { useLocation } from "wouter";
@@ -66,8 +67,8 @@ export default function SongsTable() {
           {bands.map((band) => {
             const bandSongs = songs.filter(s => s.bandId === band.id);
             return (
-              <>
-                <tr key={`band-${band.id}`} className="bg-muted/30">
+              <React.Fragment key={band.id}>
+                <tr className="bg-muted/30">
                   <td colSpan={9} className="p-2 sm:p-3 font-semibold bg-muted/30">
                     <div className="flex items-center gap-3 flex-wrap">
                       <span className="text-base sm:text-lg">{band.name}</span>
@@ -166,7 +167,7 @@ export default function SongsTable() {
                     </tr>
                   );
                 })}
-              </>
+              </React.Fragment>
             );
           })}
         </tbody>
