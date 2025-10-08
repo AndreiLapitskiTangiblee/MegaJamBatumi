@@ -30,33 +30,33 @@ export default function SongsTable() {
       <table className="w-full border-collapse" data-testid="table-songs">
         <thead>
           <tr className="border-b-2 border-border bg-muted/50">
-            <th className="text-left p-3 font-semibold sticky left-0 bg-muted/50 z-10 border-r border-border">Song</th>
-            <th className="text-left p-3 font-semibold min-w-[100px] border-r border-border">Tonality</th>
-            <th className="text-left p-3 font-semibold min-w-[100px] border-r border-border">Duration</th>
-            <th className="text-center p-3 font-semibold min-w-[80px] border-r border-border">YouTube</th>
-            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
-              <div className="flex items-center gap-2">
-                {instrumentIcons.vocals} Vocals
+            <th className="text-left p-2 sm:p-3 font-semibold sticky left-0 bg-muted/50 z-10 border-r border-border min-w-[120px]">Song</th>
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">Tonality</th>
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">Duration</th>
+            <th className="text-center p-2 sm:p-3 font-semibold min-w-[60px] border-r border-border">YT</th>
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[100px] border-r border-border">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="hidden sm:inline">{instrumentIcons.vocals}</span> Vocals
               </div>
             </th>
-            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
-              <div className="flex items-center gap-2">
-                {instrumentIcons.guitar} Guitar
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[100px] border-r border-border">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="hidden sm:inline">{instrumentIcons.guitar}</span> Guitar
               </div>
             </th>
-            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
-              <div className="flex items-center gap-2">
-                {instrumentIcons.bass} Bass
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[100px] border-r border-border">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="hidden sm:inline">{instrumentIcons.bass}</span> Bass
               </div>
             </th>
-            <th className="text-left p-3 font-semibold min-w-[150px] border-r border-border">
-              <div className="flex items-center gap-2">
-                {instrumentIcons.synth} Synth
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[100px] border-r border-border">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="hidden sm:inline">{instrumentIcons.synth}</span> Synth
               </div>
             </th>
-            <th className="text-left p-3 font-semibold min-w-[150px]">
-              <div className="flex items-center gap-2">
-                {instrumentIcons.drums} Drums
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[100px]">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="hidden sm:inline">{instrumentIcons.drums}</span> Drums
               </div>
             </th>
           </tr>
@@ -67,10 +67,10 @@ export default function SongsTable() {
             return (
               <>
                 <tr key={`band-${band.id}`} className="bg-muted/30">
-                  <td colSpan={9} className="p-3 font-semibold sticky left-0 bg-muted/30 z-10">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg">{band.name}</span>
-                      <span className="text-sm text-muted-foreground font-normal">
+                  <td colSpan={9} className="p-2 sm:p-3 font-semibold sticky left-0 bg-muted/30 z-10">
+                    <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                      <span className="text-base sm:text-lg">{band.name}</span>
+                      <span className="text-xs sm:text-sm text-muted-foreground font-normal">
                         {band.genre}
                       </span>
                     </div>
@@ -87,14 +87,14 @@ export default function SongsTable() {
                       className="border-b border-border hover-elevate"
                       data-testid={`row-song-${song.id}`}
                     >
-                      <td className="p-3 sticky left-0 bg-background z-10 border-r border-border">
-                        <div className="font-medium">{song.title}</div>
+                      <td className="p-2 sm:p-3 sticky left-0 bg-background z-10 border-r border-border">
+                        <div className="font-medium text-sm sm:text-base">{song.title}</div>
                       </td>
-                      <td className="p-3 border-r border-border">
-                        <span className="font-mono font-semibold text-primary">{song.tonality}</span>
+                      <td className="p-2 sm:p-3 border-r border-border">
+                        <span className="font-mono font-semibold text-primary text-sm sm:text-base">{song.tonality}</span>
                       </td>
-                      <td className="p-3 text-muted-foreground border-r border-border">{song.duration}</td>
-                      <td className="p-3 text-center border-r border-border">
+                      <td className="p-2 sm:p-3 text-muted-foreground border-r border-border text-sm sm:text-base">{song.duration}</td>
+                      <td className="p-2 sm:p-3 text-center border-r border-border">
                         <a
                           href={song.youtubeUrl}
                           target="_blank"
@@ -105,51 +105,51 @@ export default function SongsTable() {
                           <ExternalLink className="w-4 h-4" />
                         </a>
                       </td>
-                      <td className="p-3 border-r border-border">
+                      <td className="p-2 sm:p-3 border-r border-border">
                         {getMusicianForInstrument("vocals") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("vocals")!.name)}
-                            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors.vocals} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
+                            className={`inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${instrumentColors.vocals} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105 whitespace-nowrap`}
                           >
                             {getMusicianForInstrument("vocals")!.name}
                           </button>
                         )}
                       </td>
-                      <td className="p-3 border-r border-border">
+                      <td className="p-2 sm:p-3 border-r border-border">
                         {getMusicianForInstrument("guitar") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("guitar")!.name)}
-                            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors.guitar} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
+                            className={`inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${instrumentColors.guitar} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105 whitespace-nowrap`}
                           >
                             {getMusicianForInstrument("guitar")!.name}
                           </button>
                         )}
                       </td>
-                      <td className="p-3 border-r border-border">
+                      <td className="p-2 sm:p-3 border-r border-border">
                         {getMusicianForInstrument("bass") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("bass")!.name)}
-                            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors.bass} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
+                            className={`inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${instrumentColors.bass} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105 whitespace-nowrap`}
                           >
                             {getMusicianForInstrument("bass")!.name}
                           </button>
                         )}
                       </td>
-                      <td className="p-3 border-r border-border">
+                      <td className="p-2 sm:p-3 border-r border-border">
                         {getMusicianForInstrument("synth") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("synth")!.name)}
-                            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors.synth} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
+                            className={`inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${instrumentColors.synth} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105 whitespace-nowrap`}
                           >
                             {getMusicianForInstrument("synth")!.name}
                           </button>
                         )}
                       </td>
-                      <td className="p-3">
+                      <td className="p-2 sm:p-3">
                         {getMusicianForInstrument("drums") && (
                           <button
                             onClick={() => handleMusicianClick(getMusicianForInstrument("drums")!.name)}
-                            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors.drums} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
+                            className={`inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${instrumentColors.drums} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105 whitespace-nowrap`}
                           >
                             {getMusicianForInstrument("drums")!.name}
                           </button>

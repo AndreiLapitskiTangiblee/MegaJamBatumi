@@ -48,45 +48,45 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
 
   return (
     <div
-      className="flex items-center justify-between p-4 rounded-lg border-b last:border-b-0 hover-elevate transition-colors gap-4"
+      className="flex items-center justify-between p-3 sm:p-4 rounded-lg border-b last:border-b-0 hover-elevate transition-colors gap-2 sm:gap-4"
       data-testid={`card-song-${song.id}`}
     >
-      <div className="flex items-center gap-4 flex-1 min-w-0">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-muted text-sm font-medium flex-shrink-0">
+      <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
+        <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-muted text-xs sm:text-sm font-medium flex-shrink-0">
           {song.trackNumber}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <h3 className="text-lg font-medium" data-testid={`text-song-title-${song.id}`}>
+            <h3 className="text-base sm:text-lg font-medium" data-testid={`text-song-title-${song.id}`}>
               {song.title}
             </h3>
             <a
               href={song.youtubeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors flex-shrink-0"
               data-testid={`link-youtube-${song.id}`}
               onClick={(e) => e.stopPropagation()}
             >
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
           </div>
-          <div className="flex items-center gap-2 mt-2 flex-wrap">
+          <div className="flex items-center gap-1.5 sm:gap-2 mt-2 flex-wrap">
             {song.musicians.map((musician, index) => (
               <button
                 key={index}
                 onClick={(e) => handleMusicianClick(musician.name, e)}
-                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${getMusicianColor(musician.name)} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
+                className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium ${getMusicianColor(musician.name)} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
                 data-testid={`musician-${song.id}-${index}`}
               >
-                <span>{instrumentIcons[musician.instrument]}</span>
-                <span>{musician.name}</span>
+                <span className="text-xs sm:text-sm">{instrumentIcons[musician.instrument]}</span>
+                <span className="whitespace-nowrap">{musician.name}</span>
               </button>
             ))}
             {missingInstruments.map((instrument, index) => (
               <div
                 key={`missing-${index}`}
-                className="flex items-center justify-center w-8 h-8 rounded-full bg-white dark:bg-gray-900 border-2 border-black dark:border-white text-sm"
+                className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white dark:bg-gray-900 border-2 border-black dark:border-white text-xs sm:text-sm flex-shrink-0"
                 data-testid={`missing-instrument-${song.id}-${instrument}`}
               >
                 <span>{instrumentIcons[instrument]}</span>
@@ -95,11 +95,11 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-3 flex-shrink-0">
-        <span className="font-mono text-xl font-bold text-primary" data-testid={`text-song-tonality-${song.id}`}>
+      <div className="flex flex-col sm:flex-row items-end sm:items-center gap-1 sm:gap-3 flex-shrink-0">
+        <span className="font-mono text-lg sm:text-xl font-bold text-primary whitespace-nowrap" data-testid={`text-song-tonality-${song.id}`}>
           {song.tonality}
         </span>
-        <span className="text-sm text-muted-foreground" data-testid={`text-song-duration-${song.id}`}>
+        <span className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap" data-testid={`text-song-duration-${song.id}`}>
           {song.duration}
         </span>
       </div>
