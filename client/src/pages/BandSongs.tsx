@@ -46,9 +46,6 @@ export default function BandSongs() {
           <h1 className="text-3xl font-bold mb-2" data-testid="text-band-name">
             {band.name}
           </h1>
-          <p className="text-muted-foreground mb-4" data-testid="text-band-info">
-            {band.genre} • Formed {band.formed} • {band.origin}
-          </p>
           <p className="text-base mb-6" data-testid="text-band-description">
             {band.description}
           </p>
