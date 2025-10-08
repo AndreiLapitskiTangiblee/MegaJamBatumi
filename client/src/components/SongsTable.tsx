@@ -31,7 +31,7 @@ export default function SongsTable() {
       <table className="w-full border-collapse" data-testid="table-songs">
         <thead>
           <tr className="border-b-2 border-border bg-muted/50">
-            <th className="text-left p-2 sm:p-3 font-semibold sticky left-0 bg-muted/50 z-10 border-r border-border min-w-[120px]">Song</th>
+            <th className="text-left p-2 sm:p-3 font-semibold border-r border-border min-w-[120px]">Song</th>
             <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">Tonality</th>
             <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">Duration</th>
             <th className="text-center p-2 sm:p-3 font-semibold min-w-[50px] border-r border-border">YT</th>
@@ -68,7 +68,7 @@ export default function SongsTable() {
             return (
               <>
                 <tr key={`band-${band.id}`} className="bg-muted/30">
-                  <td colSpan={9} className="p-2 sm:p-3 font-semibold sticky left-0 bg-muted/30 z-10">
+                  <td colSpan={9} className="p-2 sm:p-3 font-semibold bg-muted/30">
                     <div className="flex items-center gap-3 flex-wrap">
                       <span className="text-base sm:text-lg">{band.name}</span>
                       <span className="text-sm text-muted-foreground font-normal">
@@ -90,7 +90,7 @@ export default function SongsTable() {
                       className="border-b border-border hover-elevate"
                       data-testid={`row-song-${song.id}`}
                     >
-                      <td className="p-2 sm:p-3 sticky left-0 bg-card z-10 border-r border-border">
+                      <td className="p-2 sm:p-3 border-r border-border">
                         <div className="font-medium text-sm sm:text-base">{song.title}</div>
                       </td>
                       <td className="p-2 sm:p-3 border-r border-border">
