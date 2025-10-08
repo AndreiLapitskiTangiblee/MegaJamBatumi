@@ -24,9 +24,6 @@ export default function BandCard({ band, songCount, onClick }: BandCardProps) {
         </Badge>
       </div>
       <div className="space-y-1">
-        <p className="text-sm text-muted-foreground" data-testid={`text-band-formed-${band.id}`}>
-          Formed {band.formed} • {band.origin}
-        </p>
         <p className="text-sm text-muted-foreground" data-testid={`text-band-genre-${band.id}`}>
           {band.genre}
         </p>
