@@ -2,423 +2,390 @@ import { Band, Song } from "@shared/schema";
 
 export const bands: Band[] = [
   {
-    id: "misha-pavlov",
+    id: "7",
     name: "Миша Павлов",
-    formed: 2015,
-    genre: "Indie Rock, Alternative",
-    origin: "Moscow, Russia",
-    description: "Contemporary indie sound with poetic Russian lyrics"
+    genre: "Singer-Songwriter",
+    formed: 2020,
+    origin: "Batumi, Georgia",
+    description: "Solo acoustic performer"
   },
   {
-    id: "vova-i-lilya",
-    name: "Вова и Лиля",
-    formed: 2018,
-    genre: "Folk Rock, Acoustic",
-    origin: "Saint Petersburg, Russia",
-    description: "Heartfelt folk melodies with intimate storytelling"
+    id: "4",
+    name: "Vladimir J",
+    genre: "Rock / Alternative",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Rock covers and originals"
   },
   {
-    id: "skin-to-bone",
-    name: "Skin To Bone",
-    formed: 2012,
-    genre: "Hard Rock, Metal",
-    origin: "Berlin, Germany",
-    description: "Raw and powerful heavy rock with intense energy"
+    id: "5",
+    name: "Лиля",
+    genre: "Rock",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Rock performer"
   },
   {
-    id: "jindiff",
-    name: "Jindiff",
-    formed: 2016,
-    genre: "Alternative Rock, Post-Rock",
-    origin: "Prague, Czech Republic",
-    description: "Atmospheric soundscapes blending alternative and experimental rock"
+    id: "6",
+    name: "Ivan T.",
+    genre: "Metal / Rock",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Heavy rock and metal covers"
   },
   {
-    id: "vitya",
-    name: "Витя",
-    formed: 2019,
-    genre: "Punk Rock, Garage Rock",
-    origin: "Kyiv, Ukraine",
-    description: "High-energy punk with garage rock attitude"
+    id: "8",
+    name: "Lera Rawlick",
+    genre: "Pop / Soul",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Pop and soul performer"
+  },
+  {
+    id: "1",
+    name: "Варя",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "2",
+    name: "Артем",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "3",
+    name: "Alexa",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
   }
 ];
 
 export const songs: Song[] = [
-  // Миша Павлов - Band members: Alex, Jordan, Sam, Taylor
+  // Миша Павлов
   {
-    id: "mp-1",
-    bandId: "misha-pavlov",
-    title: "Осенний дождь",
-    duration: "4:12",
+    id: "7-1",
+    bandId: "7",
     trackNumber: 1,
-    youtubeUrl: "https://youtube.com/watch?v=dQw4w9WgXcQ",
-    tonality: "Am",
+    title: "Миша Павлов - Батоно Батуми",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
     musicians: [
-      { name: "Alex", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
+      { name: "Миша Павлов", instrument: "guitar" }
     ]
   },
   {
-    id: "mp-2",
-    bandId: "misha-pavlov",
-    title: "Звёзды над городом",
-    duration: "3:45",
+    id: "7-2",
+    bandId: "7",
     trackNumber: 2,
-    youtubeUrl: "https://youtube.com/watch?v=oHg5SJYRHA0",
+    title: "Миша Павлов - Поменяй у кота песок",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+  {
+    id: "7-3",
+    bandId: "7",
+    trackNumber: 3,
+    title: "Миша Павлов - С тобой рядом",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+  {
+    id: "7-4",
+    bandId: "7",
+    trackNumber: 4,
+    title: "Миша Павлов - Не бойся за меня",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+  {
+    id: "7-5",
+    bandId: "7",
+    trackNumber: 5,
+    title: "Миша Павлов - Он сказал и ушел",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+
+  // Vladimir J
+  {
+    id: "4-1",
+    bandId: "4",
+    trackNumber: 1,
+    title: "Последняя поэма",
+    duration: "4:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Vladimir J", instrument: "vocals" },
+      { name: "Vladimir J", instrument: "guitar" },
+      { name: "Лиля", instrument: "vocals" }
+    ]
+  },
+  {
+    id: "4-2",
+    bandId: "4",
+    trackNumber: 2,
+    title: "Radiohead - Creep",
+    duration: "3:58",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Vladimir J", instrument: "vocals" },
+      { name: "Андрей", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+  {
+    id: "4-3",
+    bandId: "4",
+    trackNumber: 3,
+    title: "Конец фильма - Желтые глаза",
+    duration: "4:15",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Vladimir J", instrument: "vocals" },
+      { name: "Vladimir J", instrument: "guitar" },
+      { name: "Андрей", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Вася", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+  {
+    id: "4-4",
+    bandId: "4",
+    trackNumber: 4,
+    title: "Billy Joel - A Matter Of Trust",
+    duration: "4:10",
+    youtubeUrl: "#",
     tonality: "C",
     musicians: [
-      { name: "Alex", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Sam", instrument: "synth" }
+      { name: "Vladimir J", instrument: "vocals" },
+      { name: "Андрей", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Вася", instrument: "bass" },
+      { name: "Миша", instrument: "drums" }
     ]
   },
   {
-    id: "mp-3",
-    bandId: "misha-pavlov",
-    title: "Тишина",
-    duration: "5:20",
-    trackNumber: 3,
-    youtubeUrl: "https://youtube.com/watch?v=9bZkp7q19f0",
-    tonality: "Em",
-    musicians: [
-      { name: "Alex", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" },
-      { name: "Morgan", instrument: "synth" }
-    ]
-  },
-  {
-    id: "mp-4",
-    bandId: "misha-pavlov",
-    title: "Ночная Москва",
-    duration: "4:05",
-    trackNumber: 4,
-    youtubeUrl: "https://youtube.com/watch?v=kJQP7kiw5Fk",
-    tonality: "G",
-    musicians: [
-      { name: "Alex", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  {
-    id: "mp-5",
-    bandId: "misha-pavlov",
-    title: "Последний снег",
-    duration: "3:58",
+    id: "4-5",
+    bandId: "4",
     trackNumber: 5,
-    youtubeUrl: "https://youtube.com/watch?v=L_jWHffIx5E",
+    title: "Pink Floyd - Wish You Were Here",
+    duration: "5:34",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Vladimir J", instrument: "vocals" },
+      { name: "Vladimir J", instrument: "guitar" },
+      { name: "Миша", instrument: "vocals" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Миша", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+
+  // Лиля
+  {
+    id: "5-1",
+    bandId: "5",
+    trackNumber: 1,
+    title: "Bon Jovi - It's My Life",
+    duration: "3:44",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Лиля", instrument: "vocals" },
+      { name: "Андрей", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Миша", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Арт", instrument: "drums" }
+    ]
+  },
+
+  // Ivan T.
+  {
+    id: "6-1",
+    bandId: "6",
+    trackNumber: 1,
+    title: "Metallica - Enter Sandman",
+    duration: "5:31",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Ivan T.", instrument: "vocals" },
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
+  },
+  {
+    id: "6-2",
+    bandId: "6",
+    trackNumber: 2,
+    title: "Three Days Grace - Animal I Have Become",
+    duration: "3:51",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Ivan T.", instrument: "vocals" },
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
+  },
+  {
+    id: "6-3",
+    bandId: "6",
+    trackNumber: 3,
+    title: "Mushmellow - Toxic",
+    duration: "3:15",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Ivan T.", instrument: "vocals" },
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
+  },
+  {
+    id: "6-4",
+    bandId: "6",
+    trackNumber: 4,
+    title: "Drowning Pool - Bodies",
+    duration: "3:22",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Ivan T.", instrument: "vocals" },
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
+  },
+  {
+    id: "6-5",
+    bandId: "6",
+    trackNumber: 5,
+    title: "Linkin Park - From The Inside",
+    duration: "2:55",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Ivan T.", instrument: "vocals" },
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Иван", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Коля", instrument: "drums" }
+    ]
+  },
+
+  // Lera Rawlick
+  {
+    id: "8-1",
+    bandId: "8",
+    trackNumber: 1,
+    title: "ZAZ - Je veux",
+    duration: "3:30",
+    youtubeUrl: "#",
     tonality: "Dm",
     musicians: [
-      { name: "Alex", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  // Вова и Лиля - Band members: Morgan, Casey, Riley
-  {
-    id: "vl-1",
-    bandId: "vova-i-lilya",
-    title: "Вместе",
-    duration: "3:30",
-    trackNumber: 1,
-    youtubeUrl: "https://youtube.com/watch?v=fJ9rUzIMcZQ",
-    tonality: "F",
-    musicians: [
-      { name: "Morgan", instrument: "vocals" },
-      { name: "Casey", instrument: "guitar" },
-      { name: "Riley", instrument: "bass" }
+      { name: "Lera Rawlick", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Арт", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Миша", instrument: "drums" }
     ]
   },
   {
-    id: "vl-2",
-    bandId: "vova-i-lilya",
-    title: "Рассвет",
-    duration: "4:15",
+    id: "8-2",
+    bandId: "8",
     trackNumber: 2,
-    youtubeUrl: "https://youtube.com/watch?v=YQHsXMglC9A",
-    tonality: "D",
-    musicians: [
-      { name: "Morgan", instrument: "vocals" },
-      { name: "Casey", instrument: "guitar" },
-      { name: "Riley", instrument: "bass" },
-      { name: "Avery", instrument: "drums" }
-    ]
-  },
-  {
-    id: "vl-3",
-    bandId: "vova-i-lilya",
-    title: "Белые ночи",
-    duration: "3:42",
-    trackNumber: 3,
-    youtubeUrl: "https://youtube.com/watch?v=7wtfhZwyrcc",
-    tonality: "Bm",
-    musicians: [
-      { name: "Morgan", instrument: "vocals" },
-      { name: "Casey", instrument: "synth" },
-      { name: "Riley", instrument: "bass" },
-      { name: "Avery", instrument: "drums" }
-    ]
-  },
-  {
-    id: "vl-4",
-    bandId: "vova-i-lilya",
-    title: "Дорога домой",
-    duration: "5:10",
-    trackNumber: 4,
-    youtubeUrl: "https://youtube.com/watch?v=2Vv-BfVoq4g",
-    tonality: "A",
-    musicians: [
-      { name: "Morgan", instrument: "vocals" },
-      { name: "Casey", instrument: "guitar" },
-      { name: "Riley", instrument: "bass" }
-    ]
-  },
-  {
-    id: "vl-5",
-    bandId: "vova-i-lilya",
-    title: "Память",
-    duration: "4:28",
-    trackNumber: 5,
-    youtubeUrl: "https://youtube.com/watch?v=lDK9QqIzhwk",
-    tonality: "E",
-    musicians: [
-      { name: "Morgan", instrument: "vocals" },
-      { name: "Casey", instrument: "guitar" },
-      { name: "Riley", instrument: "bass" },
-      { name: "Avery", instrument: "drums" }
-    ]
-  },
-  // Skin To Bone - Band members: Avery, Jordan, Sam, Taylor, Riley
-  {
-    id: "stb-1",
-    bandId: "skin-to-bone",
-    title: "Burn the Sky",
-    duration: "4:50",
-    trackNumber: 1,
-    youtubeUrl: "https://youtube.com/watch?v=hTWKbfoikeg",
-    tonality: "E",
-    musicians: [
-      { name: "Avery", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  {
-    id: "stb-2",
-    bandId: "skin-to-bone",
-    title: "Razor Edge",
-    duration: "3:55",
-    trackNumber: 2,
-    youtubeUrl: "https://youtube.com/watch?v=cd-J5n7wk7E",
+    title: "LP - Lost On You",
+    duration: "4:26",
+    youtubeUrl: "#",
     tonality: "Fm",
     musicians: [
-      { name: "Avery", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Riley", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
+      { name: "Lera Rawlick", instrument: "vocals" },
+      { name: "Mikhail", instrument: "guitar" },
+      { name: "Арт", instrument: "synth" },
+      { name: "Вика", instrument: "bass" },
+      { name: "Миша", instrument: "drums" }
     ]
   },
+
+  // Варя - placeholder with one song
   {
-    id: "stb-3",
-    bandId: "skin-to-bone",
-    title: "Iron Will",
-    duration: "5:22",
-    trackNumber: 3,
-    youtubeUrl: "https://youtube.com/watch?v=nfWlot6h_JM",
-    tonality: "C#m",
-    musicians: [
-      { name: "Avery", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  {
-    id: "stb-4",
-    bandId: "skin-to-bone",
-    title: "Shadow Fighter",
-    duration: "4:38",
-    trackNumber: 4,
-    youtubeUrl: "https://youtube.com/watch?v=uelHwf8o7_U",
-    tonality: "Gm",
-    musicians: [
-      { name: "Avery", instrument: "vocals" },
-      { name: "Riley", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  {
-    id: "stb-5",
-    bandId: "skin-to-bone",
-    title: "Final Stand",
-    duration: "6:15",
-    trackNumber: 5,
-    youtubeUrl: "https://youtube.com/watch?v=5anLPw0Efmo",
-    tonality: "B",
-    musicians: [
-      { name: "Avery", instrument: "vocals" },
-      { name: "Jordan", instrument: "guitar" },
-      { name: "Riley", instrument: "guitar" },
-      { name: "Sam", instrument: "bass" }
-    ]
-  },
-  // Jindiff - Band members: Alex, Casey, Morgan, Taylor
-  {
-    id: "j-1",
-    bandId: "jindiff",
-    title: "Echoes in the Void",
-    duration: "6:45",
+    id: "1-1",
+    bandId: "1",
     trackNumber: 1,
-    youtubeUrl: "https://youtube.com/watch?v=jfKfPfyJRdk",
-    tonality: "F#m",
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
     musicians: [
-      { name: "Alex", instrument: "guitar" },
-      { name: "Casey", instrument: "synth" },
-      { name: "Morgan", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
+      { name: "Арт", instrument: "synth" }
     ]
   },
+
+  // Артем - placeholder with one song
   {
-    id: "j-2",
-    bandId: "jindiff",
-    title: "Crystalline",
-    duration: "5:30",
-    trackNumber: 2,
-    youtubeUrl: "https://youtube.com/watch?v=RgKAFK5djSk",
-    tonality: "Bb",
-    musicians: [
-      { name: "Alex", instrument: "vocals" },
-      { name: "Casey", instrument: "synth" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  {
-    id: "j-3",
-    bandId: "jindiff",
-    title: "Urban Drift",
-    duration: "7:12",
-    trackNumber: 3,
-    youtubeUrl: "https://youtube.com/watch?v=Ks-_Mh1QhMc",
-    tonality: "Eb",
-    musicians: [
-      { name: "Alex", instrument: "guitar" },
-      { name: "Casey", instrument: "synth" },
-      { name: "Morgan", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  {
-    id: "j-4",
-    bandId: "jindiff",
-    title: "Neon Dreams",
-    duration: "5:58",
-    trackNumber: 4,
-    youtubeUrl: "https://youtube.com/watch?v=ZyhrYis509A",
-    tonality: "Ab",
-    musicians: [
-      { name: "Alex", instrument: "guitar" },
-      { name: "Casey", instrument: "synth" },
-      { name: "Morgan", instrument: "bass" },
-      { name: "Taylor", instrument: "drums" }
-    ]
-  },
-  {
-    id: "j-5",
-    bandId: "jindiff",
-    title: "Infinite Loop",
-    duration: "8:20",
-    trackNumber: 5,
-    youtubeUrl: "https://youtube.com/watch?v=pt8VYOfr8To",
-    tonality: "Cm",
-    musicians: [
-      { name: "Alex", instrument: "vocals" },
-      { name: "Casey", instrument: "synth" },
-      { name: "Morgan", instrument: "bass" }
-    ]
-  },
-  // Витя - Band members: Riley, Sam, Jordan, Alex
-  {
-    id: "v-1",
-    bandId: "vitya",
-    title: "Бунт",
-    duration: "2:45",
+    id: "2-1",
+    bandId: "2",
     trackNumber: 1,
-    youtubeUrl: "https://youtube.com/watch?v=WfGMYdalClU",
-    tonality: "A",
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
     musicians: [
-      { name: "Riley", instrument: "vocals" },
-      { name: "Sam", instrument: "guitar" },
-      { name: "Jordan", instrument: "bass" },
-      { name: "Alex", instrument: "drums" }
+      { name: "Арт", instrument: "synth" }
     ]
   },
+
+  // Alexa - placeholder with one song
   {
-    id: "v-2",
-    bandId: "vitya",
-    title: "На улице",
-    duration: "3:10",
-    trackNumber: 2,
-    youtubeUrl: "https://youtube.com/watch?v=Soa3gO7tL-c",
-    tonality: "D",
-    musicians: [
-      { name: "Riley", instrument: "vocals" },
-      { name: "Sam", instrument: "guitar" },
-      { name: "Jordan", instrument: "bass" }
-    ]
-  },
-  {
-    id: "v-3",
-    bandId: "vitya",
-    title: "Свобода",
-    duration: "2:55",
-    trackNumber: 3,
-    youtubeUrl: "https://youtube.com/watch?v=SQoA_wjmE9w",
-    tonality: "E",
-    musicians: [
-      { name: "Riley", instrument: "vocals" },
-      { name: "Sam", instrument: "guitar" },
-      { name: "Jordan", instrument: "bass" },
-      { name: "Alex", instrument: "drums" }
-    ]
-  },
-  {
-    id: "v-4",
-    bandId: "vitya",
-    title: "Время перемен",
-    duration: "3:25",
-    trackNumber: 4,
-    youtubeUrl: "https://youtube.com/watch?v=60ItHLz5WEA",
-    tonality: "G",
-    musicians: [
-      { name: "Riley", instrument: "vocals" },
-      { name: "Sam", instrument: "guitar" },
-      { name: "Jordan", instrument: "bass" },
-      { name: "Morgan", instrument: "synth" },
-      { name: "Alex", instrument: "drums" }
-    ]
-  },
-  {
-    id: "v-5",
-    bandId: "vitya",
-    title: "Молодость",
-    duration: "2:38",
-    trackNumber: 5,
-    youtubeUrl: "https://youtube.com/watch?v=8UVNT4wvIGY",
-    tonality: "C",
-    musicians: [
-      { name: "Riley", instrument: "vocals" },
-      { name: "Sam", instrument: "guitar" },
-      { name: "Jordan", instrument: "bass" },
-      { name: "Alex", instrument: "drums" }
-    ]
+    id: "3-1",
+    bandId: "3",
+    trackNumber: 1,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
   }
 ];
 
