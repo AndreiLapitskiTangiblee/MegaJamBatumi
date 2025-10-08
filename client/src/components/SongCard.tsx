@@ -21,21 +21,8 @@ const instrumentIcons: Record<string, string> = {
   electricGuitar2: "🎸"
 };
 
-const allInstruments: Array<"vocals" | "backVocal" | "acoustic" | "electricGuitar" | "electricGuitar2" | "bass" | "piano" | "drums"> = [
-  "vocals",
-  "backVocal",
-  "acoustic",
-  "electricGuitar", 
-  "electricGuitar2",
-  "bass",
-  "piano",
-  "drums"
-];
-
 export default function SongCard({ song, onMusicianClick }: SongCardProps) {
   const [, setLocation] = useLocation();
-  const presentInstruments = new Set(song.musicians.map(m => m.instrument));
-  const missingInstruments = allInstruments.filter(inst => !presentInstruments.has(inst));
 
   const handleMusicianClick = (musicianName: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -82,15 +69,6 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
                 <span className="text-xs sm:text-sm">{instrumentIcons[musician.instrument]}</span>
                 <span className="whitespace-nowrap">{musician.name}</span>
               </button>
-            ))}
-            {missingInstruments.map((instrument, index) => (
-              <div
-                key={`missing-${index}`}
-                className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white dark:bg-gray-900 border-2 border-black dark:border-white text-xs sm:text-sm flex-shrink-0"
-                data-testid={`missing-instrument-${song.id}-${instrument}`}
-              >
-                <span>{instrumentIcons[instrument]}</span>
-              </div>
             ))}
           </div>
         </div>
