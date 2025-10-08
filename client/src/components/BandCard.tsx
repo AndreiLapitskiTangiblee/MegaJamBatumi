@@ -8,10 +8,11 @@ interface BandCardProps {
   songCount: number;
   totalDuration: string;
   backgroundImage?: string;
+  sequenceNumber?: number;
   onClick: () => void;
 }
 
-export default function BandCard({ band, songCount, totalDuration, backgroundImage, onClick }: BandCardProps) {
+export default function BandCard({ band, songCount, totalDuration, backgroundImage, sequenceNumber, onClick }: BandCardProps) {
   return (
     <Card
       className="p-6 cursor-pointer hover-elevate active-elevate-2 transition-transform hover:scale-[1.02] relative overflow-hidden"
@@ -26,6 +27,11 @@ export default function BandCard({ band, songCount, totalDuration, backgroundIma
       )}
       <div className="relative z-10">
         <div className="flex items-start justify-between gap-3 mb-2">
+          {sequenceNumber && (
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-muted text-muted-foreground text-sm font-semibold flex-shrink-0">
+              {sequenceNumber}
+            </div>
+          )}
           <h2 className="text-2xl font-semibold flex-1" data-testid={`text-band-name-${band.id}`}>
             {band.name}
           </h2>

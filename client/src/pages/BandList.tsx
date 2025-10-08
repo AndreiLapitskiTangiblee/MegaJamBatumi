@@ -63,18 +63,15 @@ export default function BandList() {
               const bandSongs = getSongsByBandId(band.id);
               const backgroundImage = getBandBackgroundImage(band.id);
               return (
-                <div key={band.id} className="relative">
-                  <div className="absolute -left-2 -top-2 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-base font-bold z-10 shadow-lg">
-                    {index + 1}
-                  </div>
-                  <BandCard
-                    band={band}
-                    songCount={bandSongs.length}
-                    totalDuration={getTotalDuration(bandSongs)}
-                    backgroundImage={backgroundImage}
-                    onClick={() => setLocation(`/band/${band.id}`)}
-                  />
-                </div>
+                <BandCard
+                  key={band.id}
+                  band={band}
+                  songCount={bandSongs.length}
+                  totalDuration={getTotalDuration(bandSongs)}
+                  backgroundImage={backgroundImage}
+                  sequenceNumber={index + 1}
+                  onClick={() => setLocation(`/band/${band.id}`)}
+                />
               );
             })}
           </div>
