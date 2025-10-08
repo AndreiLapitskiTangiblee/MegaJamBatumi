@@ -20,7 +20,7 @@ export default function BandCard({ band, songCount, totalDuration, backgroundIma
     >
       {backgroundImage && (
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+          className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       )}

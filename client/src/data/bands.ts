@@ -1483,32 +1483,52 @@ export function getMusicianColor(musicianName: string): string {
   return musicianColorPalette[index % musicianColorPalette.length];
 }
 
-import rockImage from '@assets/stock_images/electric_guitar_ampl_f2f2a3df.jpg';
-import metalImage from '@assets/stock_images/heavy_metal_concert__e0730810.jpg';
-import acousticImage from '@assets/stock_images/acoustic_guitar_sing_af70b75b.jpg';
-import soulImage from '@assets/stock_images/microphone_stage_spo_70cf1786.jpg';
-import alternativeImage from '@assets/stock_images/grunge_alternative_r_2fb973d5.jpg';
-import classicRockImage from '@assets/stock_images/classic_rock_blues_g_0ee73ada.jpg';
-import vinylImage from '@assets/stock_images/vintage_vinyl_record_65a04b43.jpg';
+import bg1 from '@assets/stock_images/rock_concert_electri_735a5994.jpg';
+import bg2 from '@assets/stock_images/rock_concert_electri_deb34faf.jpg';
+import bg3 from '@assets/stock_images/rock_concert_electri_772ed8a5.jpg';
+import bg4 from '@assets/stock_images/drums_drummer_live_m_e3c51ede.jpg';
+import bg5 from '@assets/stock_images/drums_drummer_live_m_fc03e6e3.jpg';
+import bg6 from '@assets/stock_images/drums_drummer_live_m_00983591.jpg';
+import bg7 from '@assets/stock_images/vocalist_microphone__604357e2.jpg';
+import bg8 from '@assets/stock_images/vocalist_microphone__5f1b785c.jpg';
+import bg9 from '@assets/stock_images/vocalist_microphone__b5d8f59a.jpg';
+import bg10 from '@assets/stock_images/monkeys_music_band_i_f2945e5f.jpg';
+import bg11 from '@assets/stock_images/monkeys_music_band_i_bbf11731.jpg';
+import bg12 from '@assets/stock_images/bass_guitar_close_up_5a1c6258.jpg';
+import bg13 from '@assets/stock_images/bass_guitar_close_up_8ad7e242.jpg';
+import bg14 from '@assets/stock_images/bass_guitar_close_up_5ffc6b0b.jpg';
+import bg15 from '@assets/stock_images/rock_band_stage_perf_5c3baa0b.jpg';
+import bg16 from '@assets/stock_images/rock_band_stage_perf_faf41c6e.jpg';
+import bg17 from '@assets/stock_images/rock_band_stage_perf_5cfcb1ef.jpg';
+import bg18 from '@assets/stock_images/guitar_amplifier_ped_464d5476.jpg';
+import bg19 from '@assets/stock_images/guitar_amplifier_ped_e42b90b4.jpg';
+import bg20 from '@assets/stock_images/music_festival_conce_fadef4bb.jpg';
+import bg21 from '@assets/stock_images/music_festival_conce_7b762546.jpg';
 
 const bandBackgroundImages: Record<string, string> = {
-  "4": rockImage,
-  "5": rockImage,
-  "6": metalImage,
-  "7": acousticImage,
-  "8": soulImage,
-  "9": alternativeImage,
-  "12": vinylImage,
-  "18": classicRockImage
+  "1": bg1,
+  "2": bg2,
+  "3": bg3,
+  "4": bg4,
+  "5": bg5,
+  "6": bg6,
+  "7": bg7,
+  "8": bg8,
+  "9": bg9,
+  "10": bg10,
+  "11": bg11,
+  "12": bg12,
+  "13": bg13,
+  "14": bg14,
+  "15": bg15,
+  "16": bg16,
+  "17": bg17,
+  "18": bg18,
+  "19": bg19,
+  "20": bg20,
+  "21": bg21
 };
 
 export function getBandBackgroundImage(bandId: string): string | undefined {
-  const bandSongs = getSongsByBandId(bandId);
-  const hasRealSongs = bandSongs.some(song => song.title !== "? - ?");
-  
-  if (!hasRealSongs) {
-    return undefined;
-  }
-  
   return bandBackgroundImages[bandId];
 }
