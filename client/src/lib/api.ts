@@ -83,6 +83,54 @@ function estimateDuration(songName: string): string {
   return "4:00";
 }
 
+function detectGenre(songs: ApiSong[]): string {
+  // Extract all valid song names
+  const songNames = songs
+    .filter(s => s.songName && s.songName.trim() !== "" && s.songName !== "? - ?")
+    .map(s => s.songName.toLowerCase());
+  
+  if (songNames.length === 0) {
+    return "Various";
+  }
+  
+  // Genre detection patterns
+  const genrePatterns = [
+    { keywords: ['metallica', 'three days grace', 'drowning pool', 'linkin park', 'enter sandman', 'bodies'], genre: 'Metal / Rock' },
+    { keywords: ['radiohead', 'pink floyd', 'creep', 'wish you were here'], genre: 'Alternative Rock' },
+    { keywords: ['bon jovi', "it's my life"], genre: 'Rock' },
+    { keywords: ['billy joel'], genre: 'Rock / Pop' },
+    { keywords: ['zaz', 'je veux'], genre: 'French Pop / Jazz' },
+    { keywords: ['lp', 'lost on you'], genre: 'Pop / Alternative' },
+    { keywords: ['jazz', 'blues'], genre: 'Jazz / Blues' },
+    { keywords: ['classical', 'symphony', 'concerto'], genre: 'Classical' },
+    { keywords: ['hip hop', 'rap'], genre: 'Hip Hop' },
+    { keywords: ['electronic', 'edm', 'techno'], genre: 'Electronic' },
+  ];
+  
+  // Check each pattern
+  for (const pattern of genrePatterns) {
+    const matched = songNames.some(name => 
+      pattern.keywords.some(keyword => name.includes(keyword))
+    );
+    if (matched) {
+      return pattern.genre;
+    }
+  }
+  
+  // Check if all songs are from the same artist (original music)
+  const uniqueArtists = new Set(
+    songNames
+      .filter(name => name.includes(' - '))
+      .map(name => name.split(' - ')[0].trim())
+  );
+  
+  if (uniqueArtists.size === 1 && songNames.length > 2) {
+    return 'Original Music';
+  }
+  
+  return "Various";
+}
+
 export async function fetchBandsData(): Promise<{ bands: Band[], songs: Song[] }> {
   try {
     const response = await fetch(API_URL, {
@@ -110,14 +158,18 @@ export async function fetchBandsData(): Promise<{ bands: Band[], songs: Song[] }
     const songs: Song[] = [];
     
     apiData.forEach((apiBand) => {
+      // Detect genre from songs
+      const genre = detectGenre(apiBand.songs);
+      const description = genre !== "Various" ? genre : "Performer";
+      
       // Create band
       const band: Band = {
         id: apiBand.id,
         name: apiBand.name,
-        genre: "Various",
+        genre: genre,
         formed: 2025,
         origin: "Batumi, Georgia",
-        description: "Performer at Mega Jam Batumi"
+        description: description
       };
       bands.push(band);
       
