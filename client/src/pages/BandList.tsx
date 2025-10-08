@@ -166,7 +166,7 @@ export default function BandList() {
           </div>
         ) : viewMode === "cards" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {bands.map((band, index) => {
+            {bands.map((band) => {
               const bandSongs = songs.filter(s => s.bandId === band.id);
               const backgroundImage = getBandBackgroundImage(band.id);
               const bandDurationSeconds = bandSongs.reduce((acc, song) => acc + parseDuration(song.duration), 0);
@@ -179,7 +179,7 @@ export default function BandList() {
                   songCount={bandSongs.length}
                   totalDuration={bandDuration}
                   backgroundImage={backgroundImage}
-                  sequenceNumber={index + 1}
+                  sequenceNumber={parseInt(band.id)}
                   onClick={() => setLocation(`/band/${band.id}`)}
                 />
               );
