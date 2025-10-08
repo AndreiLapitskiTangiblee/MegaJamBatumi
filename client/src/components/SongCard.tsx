@@ -37,7 +37,7 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
 
   return (
     <div
-      className="flex items-center justify-between p-3 sm:p-4 rounded-lg border-b last:border-b-0 hover-elevate transition-colors gap-2 sm:gap-4"
+      className="flex items-center justify-between p-3 sm:p-4 hover-elevate transition-colors gap-2 sm:gap-4"
       data-testid={`card-song-${song.id}`}
     >
       <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">

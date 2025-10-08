@@ -54,9 +54,11 @@ export default function BandSongs() {
           </h2>
         </header>
 
-        <div className="bg-card rounded-lg border border-card-border">
+        <div className="space-y-3">
           {songs.map((song) => (
-            <SongCard key={song.id} song={song} />
+            <div key={song.id} className="bg-card rounded-lg border border-card-border">
+              <SongCard song={song} />
+            </div>
           ))}
         </div>
       </div>
