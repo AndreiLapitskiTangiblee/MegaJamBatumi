@@ -123,19 +123,34 @@ Preferred communication style: Simple, everyday language.
   - JavaScript module format parsed using Function constructor
   - Cached for 5 minutes using React Query
   - Handles 21 bands with complete song and musician data
+- **MusicBrainz API** - Free music metadata service for song durations
+  - Queries: https://musicbrainz.org/ws/2/recording
+  - No API key required (uses User-Agent header)
+  - Results cached in-memory to avoid duplicate requests
+  - Fallback to "4:00" if song not found
 - **YouTube** - External links to song videos (no API integration, just URLs)
 - **Google Fonts** - Inter font family for typography
 - No authentication service (prepared but not implemented)
 
 ## Recent Changes
 
-### Dynamic Data Loading (Latest)
-- **Removed static data** - Eliminated hardcoded band/song data
-- **External API integration** - Now fetches live data from https://mega-jam.pages.dev/js/requests/requests.js
-- **Parser implementation** - Uses Function constructor to safely execute JavaScript module and extract data
-- **React Query integration** - Custom `useBandsData()` hook with 5-minute caching
-- **Data transformation** - Converts API format to internal Band and Song types
-- **Loading states** - Shows loading indicators while fetching data
+### Dynamic Data & Features (Latest)
+- **Dynamic song duration lookup** - Real-time fetching of actual song lengths from MusicBrainz API
+  - Parses song titles to extract artist and track name
+  - Queries MusicBrainz for accurate duration data
+  - Caches results to minimize API calls
+  - Falls back to default duration if song not found
+- **Song numbering format** - Songs numbered as "bandId.songIndex" (e.g., 12.4)
+  - Displayed in both card and table views
+  - Uses band ID from API data
+- **Band sequence numbers** - Uses band ID from API instead of auto-increment
+- **Dynamic genre detection** - Automatically detects genre from song titles
+  - Patterns for Metal/Rock, Alternative Rock, French Pop/Jazz, etc.
+  - Fallback to "Performer" if genre unknown
+- **External API integration** - Fetches live data from https://mega-jam.pages.dev/js/requests/requests.js
+  - Parser implementation using Function constructor
+  - React Query integration with 5-minute caching
+  - Data transformation to internal types
 - **View mode persistence** - Card/Table view preference saved in localStorage
 - **Scroll position memory** - Restores scroll position when returning to bands list
 - **Navigation behavior** - Band detail pages always scroll to top on load

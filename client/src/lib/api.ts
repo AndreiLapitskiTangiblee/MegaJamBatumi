@@ -73,13 +73,27 @@ function transformInstrumentsToMusicians(instruments: ApiInstruments): Musician[
   return musicians;
 }
 
-function estimateDuration(songName: string): string {
-  // For unknown songs "? - ?", use 4:00
+async function fetchSongDuration(songName: string): Promise<string> {
+  // For unknown songs "? - ?", use default
   if (songName === "? - ?" || !songName.trim()) {
     return "4:00";
   }
-  
-  // For known songs, estimate based on typical song length
+
+  try {
+    // Use backend endpoint to fetch duration
+    const response = await fetch(`/api/song-duration?song=${encodeURIComponent(songName)}`);
+    
+    if (response.ok) {
+      const data = await response.json();
+      if (data.duration) {
+        return data.duration;
+      }
+    }
+  } catch (error) {
+    console.warn(`Could not fetch duration for "${songName}":`, error);
+  }
+
+  // Default fallback
   return "4:00";
 }
 
@@ -155,7 +169,7 @@ export async function fetchBandsData(): Promise<{ bands: Band[], songs: Song[] }
     const apiData: ApiBand[] = func();
     
     const bands: Band[] = [];
-    const songs: Song[] = [];
+    const songsPromises: Promise<Song>[] = [];
     
     apiData.forEach((apiBand) => {
       // Detect genre from songs
@@ -179,32 +193,42 @@ export async function fetchBandsData(): Promise<{ bands: Band[], songs: Song[] }
       );
       
       validSongs.forEach((apiSong, index) => {
-        const musicians = transformInstrumentsToMusicians(apiSong.instruments);
+        const songPromise = (async () => {
+          const musicians = transformInstrumentsToMusicians(apiSong.instruments);
+          
+          // Determine YouTube URL
+          let youtubeUrl = apiSong.link || "";
+          let autoFoundYoutubeUrl = false;
+          
+          if (!youtubeUrl && apiSong.songName !== "? - ?") {
+            youtubeUrl = createYouTubeSearchUrl(apiSong.songName);
+            autoFoundYoutubeUrl = true;
+          }
+          
+          // Fetch duration asynchronously
+          const duration = await fetchSongDuration(apiSong.songName);
+          
+          const song: Song = {
+            id: `${apiBand.id}-${index + 1}`,
+            bandId: apiBand.id,
+            title: apiSong.songName,
+            duration,
+            trackNumber: index + 1,
+            youtubeUrl,
+            tonality: apiSong.key || "-",
+            musicians,
+            autoFoundYoutubeUrl
+          };
+          
+          return song;
+        })();
         
-        // Determine YouTube URL
-        let youtubeUrl = apiSong.link || "";
-        let autoFoundYoutubeUrl = false;
-        
-        if (!youtubeUrl && apiSong.songName !== "? - ?") {
-          youtubeUrl = createYouTubeSearchUrl(apiSong.songName);
-          autoFoundYoutubeUrl = true;
-        }
-        
-        const song: Song = {
-          id: `${apiBand.id}-${index + 1}`,
-          bandId: apiBand.id,
-          title: apiSong.songName,
-          duration: estimateDuration(apiSong.songName),
-          trackNumber: index + 1,
-          youtubeUrl,
-          tonality: apiSong.key || "-",
-          musicians,
-          autoFoundYoutubeUrl
-        };
-        
-        songs.push(song);
+        songsPromises.push(songPromise);
       });
     });
+    
+    // Wait for all song durations to be fetched
+    const songs = await Promise.all(songsPromises);
     
     return { bands, songs };
   } catch (error) {
