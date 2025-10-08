@@ -41,8 +41,8 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
       data-testid={`card-song-${song.id}`}
     >
       <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
-        <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-muted text-xs sm:text-sm font-medium flex-shrink-0">
-          {song.trackNumber}
+        <div className="flex items-center justify-center min-w-[3rem] sm:min-w-[3.5rem] h-7 sm:h-8 rounded-full bg-muted text-xs sm:text-sm font-medium flex-shrink-0 px-2">
+          {song.bandId}.{song.trackNumber}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">

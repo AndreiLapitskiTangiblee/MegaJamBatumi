@@ -46,6 +46,7 @@ export default function SongsTable() {
       <table className="w-full border-collapse" data-testid="table-songs">
         <thead>
           <tr className="border-b-2 border-border bg-muted/50">
+            <th className="text-center p-2 sm:p-3 font-semibold border-r border-border min-w-[60px]">#</th>
             <th className="text-left p-2 sm:p-3 font-semibold border-r border-border min-w-[120px]">Song</th>
             <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">Tonality</th>
             <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">Duration</th>
@@ -83,7 +84,7 @@ export default function SongsTable() {
             return (
               <React.Fragment key={band.id}>
                 <tr className="bg-muted/30">
-                  <td colSpan={9} className="p-2 sm:p-3 font-semibold bg-muted/30">
+                  <td colSpan={10} className="p-2 sm:p-3 font-semibold bg-muted/30">
                     <div className="flex items-center gap-3 flex-wrap">
                       <span className="text-base sm:text-lg">{band.name}</span>
                       <span className="text-sm text-muted-foreground font-normal">
@@ -105,6 +106,11 @@ export default function SongsTable() {
                       className="border-b border-border hover-elevate"
                       data-testid={`row-song-${song.id}`}
                     >
+                      <td className="p-2 sm:p-3 text-center border-r border-border">
+                        <div className="text-xs sm:text-sm font-medium text-muted-foreground">
+                          {song.bandId}.{song.trackNumber}
+                        </div>
+                      </td>
                       <td className="p-2 sm:p-3 border-r border-border">
                         <div className="font-medium text-sm sm:text-base">{song.title}</div>
                       </td>
