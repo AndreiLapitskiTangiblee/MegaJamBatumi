@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { bands, getSongsByBandId, getAllSongsTotalDuration, songs, getTotalDuration, getBandBackgroundImage } from "@/data/bands";
 import BandCard from "@/components/BandCard";
 import SongsTable from "@/components/SongsTable";
@@ -7,11 +7,33 @@ import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { LayoutGrid, Table } from "lucide-react";
 
+const SCROLL_POSITION_KEY = "bandListScrollPosition";
+
 export default function BandList() {
   const [, setLocation] = useLocation();
   const [viewMode, setViewMode] = useState<"cards" | "table">("cards");
   const totalDuration = getAllSongsTotalDuration();
   const totalSongs = songs.length;
+
+  // Restore scroll position when component mounts
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem(SCROLL_POSITION_KEY);
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+    }
+  }, []);
+
+  // Save scroll position before navigating away
+  useEffect(() => {
+    const handleScroll = () => {
+      sessionStorage.setItem(SCROLL_POSITION_KEY, window.scrollY.toString());
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

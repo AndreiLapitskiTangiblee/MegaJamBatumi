@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRoute, useLocation } from "wouter";
 import { getBandById, getSongsByBandId } from "@/data/bands";
 import SongCard from "@/components/SongCard";
@@ -12,6 +13,11 @@ export default function BandSongs() {
   const bandId = params?.id || "";
   const band = getBandById(bandId);
   const songs = getSongsByBandId(bandId);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!band) {
     return (
