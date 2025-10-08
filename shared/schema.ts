@@ -28,7 +28,7 @@ export interface Band {
 
 export interface Musician {
   name: string;
-  instrument: "drums" | "guitar" | "bass" | "synth" | "vocals";
+  instrument: "drums" | "guitar" | "bass" | "synth" | "vocals" | "acoustic" | "piano" | "backVocal" | "electricGuitar" | "electricGuitar2";
 }
 
 export interface Song {

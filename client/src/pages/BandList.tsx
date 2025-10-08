@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { bands, getSongsByBandId } from "@/data/bands";
+import { bands, getSongsByBandId, getAllSongsTotalDuration, songs, getTotalDuration, getBandBackgroundImage } from "@/data/bands";
 import BandCard from "@/components/BandCard";
 import SongsTable from "@/components/SongsTable";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -10,6 +10,8 @@ import { LayoutGrid, Table } from "lucide-react";
 export default function BandList() {
   const [, setLocation] = useLocation();
   const [viewMode, setViewMode] = useState<"cards" | "table">("cards");
+  const totalDuration = getAllSongsTotalDuration();
+  const totalSongs = songs.length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -24,7 +26,7 @@ export default function BandList() {
                 19 Oct 2025
               </p>
               <p className="text-muted-foreground" data-testid="text-page-subtitle">
-                {bands.length} bands performing
+                {bands.length} bands performing • {totalSongs} songs • {totalDuration}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -57,14 +59,20 @@ export default function BandList() {
 
         {viewMode === "cards" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {bands.map((band) => (
-              <BandCard
-                key={band.id}
-                band={band}
-                songCount={getSongsByBandId(band.id).length}
-                onClick={() => setLocation(`/band/${band.id}`)}
-              />
-            ))}
+            {bands.map((band) => {
+              const bandSongs = getSongsByBandId(band.id);
+              const backgroundImage = getBandBackgroundImage(band.id);
+              return (
+                <BandCard
+                  key={band.id}
+                  band={band}
+                  songCount={bandSongs.length}
+                  totalDuration={getTotalDuration(bandSongs)}
+                  backgroundImage={backgroundImage}
+                  onClick={() => setLocation(`/band/${band.id}`)}
+                />
+              );
+            })}
           </div>
         ) : (
           <SongsTable />

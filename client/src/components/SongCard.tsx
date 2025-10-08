@@ -1,6 +1,7 @@
 import { Song } from "@shared/schema";
 import { ExternalLink } from "lucide-react";
 import { useLocation } from "wouter";
+import { getMusicianColor } from "@/data/bands";
 
 interface SongCardProps {
   song: Song;
@@ -12,22 +13,22 @@ const instrumentIcons: Record<string, string> = {
   guitar: "🎸",
   bass: "🎸",
   synth: "🎹",
-  vocals: "🎤"
+  vocals: "🎤",
+  acoustic: "🎸",
+  piano: "🎹",
+  backVocal: "🎤",
+  electricGuitar: "🎸",
+  electricGuitar2: "🎸"
 };
 
-const instrumentColors: Record<string, string> = {
-  vocals: "bg-cyan-500 text-white",
-  guitar: "bg-indigo-500 text-white",
-  bass: "bg-violet-500 text-white",
-  synth: "bg-fuchsia-500 text-white",
-  drums: "bg-rose-500 text-white"
-};
-
-const allInstruments: Array<"vocals" | "guitar" | "bass" | "synth" | "drums"> = [
+const allInstruments: Array<"vocals" | "backVocal" | "acoustic" | "electricGuitar" | "electricGuitar2" | "bass" | "piano" | "drums"> = [
   "vocals",
-  "guitar", 
+  "backVocal",
+  "acoustic",
+  "electricGuitar", 
+  "electricGuitar2",
   "bass",
-  "synth",
+  "piano",
   "drums"
 ];
 
@@ -75,7 +76,7 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
               <button
                 key={index}
                 onClick={(e) => handleMusicianClick(musician.name, e)}
-                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${instrumentColors[musician.instrument]} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${getMusicianColor(musician.name)} hover-elevate active-elevate-2 cursor-pointer transition-transform hover:scale-105`}
                 data-testid={`musician-${song.id}-${index}`}
               >
                 <span>{instrumentIcons[musician.instrument]}</span>
@@ -95,7 +96,7 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
         </div>
       </div>
       <div className="flex items-center gap-3 flex-shrink-0">
-        <span className="font-mono text-sm font-semibold text-primary" data-testid={`text-song-tonality-${song.id}`}>
+        <span className="font-mono text-xl font-bold text-primary" data-testid={`text-song-tonality-${song.id}`}>
           {song.tonality}
         </span>
         <span className="text-sm text-muted-foreground" data-testid={`text-song-duration-${song.id}`}>

@@ -178,7 +178,7 @@ export const songs: Song[] = [
     bandId: "1",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -192,7 +192,7 @@ export const songs: Song[] = [
     bandId: "2",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -206,7 +206,7 @@ export const songs: Song[] = [
     bandId: "3",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -216,7 +216,7 @@ export const songs: Song[] = [
     bandId: "3",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -226,7 +226,7 @@ export const songs: Song[] = [
     bandId: "3",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -236,7 +236,7 @@ export const songs: Song[] = [
     bandId: "3",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -246,7 +246,7 @@ export const songs: Song[] = [
     bandId: "3",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -263,8 +263,8 @@ export const songs: Song[] = [
     tonality: "-",
     musicians: [
       { name: "Vladimir J", instrument: "vocals" },
-      { name: "Vladimir J", instrument: "guitar" },
-      { name: "Лиля", instrument: "vocals" }
+      { name: "Vladimir J", instrument: "acoustic" },
+      { name: "Лиля", instrument: "backVocal" }
     ]
   },
   {
@@ -277,8 +277,8 @@ export const songs: Song[] = [
     tonality: "-",
     musicians: [
       { name: "Vladimir J", instrument: "vocals" },
-      { name: "Андрей", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Андрей", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Вика", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -288,14 +288,14 @@ export const songs: Song[] = [
     bandId: "4",
     trackNumber: 3,
     title: "Конец фильма - Желтые глаза",
-    duration: "4:15",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Vladimir J", instrument: "vocals" },
-      { name: "Vladimir J", instrument: "guitar" },
-      { name: "Андрей", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Vladimir J", instrument: "acoustic" },
+      { name: "Андрей", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Вася", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -310,8 +310,8 @@ export const songs: Song[] = [
     tonality: "C",
     musicians: [
       { name: "Vladimir J", instrument: "vocals" },
-      { name: "Андрей", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Андрей", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Вася", instrument: "bass" },
       { name: "Миша", instrument: "drums" }
     ]
@@ -321,15 +321,15 @@ export const songs: Song[] = [
     bandId: "4",
     trackNumber: 5,
     title: "Pink Floyd - Wish You Were Here",
-    duration: "5:34",
+    duration: "5:04",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Vladimir J", instrument: "vocals" },
-      { name: "Vladimir J", instrument: "guitar" },
-      { name: "Миша", instrument: "vocals" },
-      { name: "Иван", instrument: "guitar" },
-      { name: "Миша", instrument: "synth" },
+      { name: "Vladimir J", instrument: "acoustic" },
+      { name: "Миша", instrument: "backVocal" },
+      { name: "Иван", instrument: "electricGuitar" },
+      { name: "Миша", instrument: "piano" },
       { name: "Вика", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -346,9 +346,9 @@ export const songs: Song[] = [
     tonality: "-",
     musicians: [
       { name: "Лиля", instrument: "vocals" },
-      { name: "Андрей", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
-      { name: "Миша", instrument: "synth" },
+      { name: "Андрей", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
+      { name: "Миша", instrument: "piano" },
       { name: "Вика", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -365,8 +365,8 @@ export const songs: Song[] = [
     tonality: "-",
     musicians: [
       { name: "Ivan T.", instrument: "vocals" },
-      { name: "Евгений", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Евгений", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Коля", instrument: "drums" }
     ]
@@ -376,13 +376,13 @@ export const songs: Song[] = [
     bandId: "6",
     trackNumber: 2,
     title: "Three Days Grace - Animal I Have Become",
-    duration: "3:51",
+    duration: "3:50",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Ivan T.", instrument: "vocals" },
-      { name: "Евгений", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Евгений", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Коля", instrument: "drums" }
     ]
@@ -392,13 +392,13 @@ export const songs: Song[] = [
     bandId: "6",
     trackNumber: 3,
     title: "Mushmellow - Toxic",
-    duration: "3:15",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Ivan T.", instrument: "vocals" },
-      { name: "Евгений", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Евгений", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Коля", instrument: "drums" }
     ]
@@ -408,13 +408,13 @@ export const songs: Song[] = [
     bandId: "6",
     trackNumber: 4,
     title: "Drowning Pool - Bodies",
-    duration: "3:22",
+    duration: "3:21",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Ivan T.", instrument: "vocals" },
-      { name: "Евгений", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Евгений", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Коля", instrument: "drums" }
     ]
@@ -429,8 +429,8 @@ export const songs: Song[] = [
     tonality: "-",
     musicians: [
       { name: "Ivan T.", instrument: "vocals" },
-      { name: "Евгений", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Евгений", instrument: "electricGuitar" },
+      { name: "Иван", instrument: "electricGuitar2" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Коля", instrument: "drums" }
     ]
@@ -442,12 +442,12 @@ export const songs: Song[] = [
     bandId: "7",
     trackNumber: 1,
     title: "Миша Павлов - Батоно Батуми",
-    duration: "3:30",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
+      { name: "Миша Павлов", instrument: "acoustic" }
     ]
   },
   {
@@ -455,12 +455,12 @@ export const songs: Song[] = [
     bandId: "7",
     trackNumber: 2,
     title: "Миша Павлов - Поменяй у кота песок",
-    duration: "3:30",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
+      { name: "Миша Павлов", instrument: "acoustic" }
     ]
   },
   {
@@ -468,12 +468,12 @@ export const songs: Song[] = [
     bandId: "7",
     trackNumber: 3,
     title: "Миша Павлов - С тобой рядом",
-    duration: "3:30",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
+      { name: "Миша Павлов", instrument: "acoustic" }
     ]
   },
   {
@@ -481,12 +481,12 @@ export const songs: Song[] = [
     bandId: "7",
     trackNumber: 4,
     title: "Миша Павлов - Не бойся за меня",
-    duration: "3:30",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
+      { name: "Миша Павлов", instrument: "acoustic" }
     ]
   },
   {
@@ -494,12 +494,12 @@ export const songs: Song[] = [
     bandId: "7",
     trackNumber: 5,
     title: "Миша Павлов - Он сказал и ушел",
-    duration: "3:30",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
       { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
+      { name: "Миша Павлов", instrument: "acoustic" }
     ]
   },
 
@@ -509,13 +509,13 @@ export const songs: Song[] = [
     bandId: "8",
     trackNumber: 1,
     title: "ZAZ - Je veux",
-    duration: "3:30",
+    duration: "3:35",
     youtubeUrl: "#",
     tonality: "Dm",
     musicians: [
       { name: "Lera Rawlick", instrument: "vocals" },
-      { name: "Mikhail", instrument: "guitar" },
-      { name: "Арт", instrument: "synth" },
+      { name: "Mikhail", instrument: "electricGuitar" },
+      { name: "Арт", instrument: "piano" },
       { name: "Вика", instrument: "bass" },
       { name: "Миша", instrument: "drums" }
     ]
@@ -525,13 +525,13 @@ export const songs: Song[] = [
     bandId: "8",
     trackNumber: 2,
     title: "LP - Lost On You",
-    duration: "4:26",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "Fm",
     musicians: [
       { name: "Lera Rawlick", instrument: "vocals" },
-      { name: "Mikhail", instrument: "guitar" },
-      { name: "Арт", instrument: "synth" },
+      { name: "Mikhail", instrument: "electricGuitar" },
+      { name: "Арт", instrument: "piano" },
       { name: "Вика", instrument: "bass" },
       { name: "Миша", instrument: "drums" }
     ]
@@ -541,13 +541,13 @@ export const songs: Song[] = [
     bandId: "8",
     trackNumber: 3,
     title: "Beth Hart - Your Heart Is As Black As Night",
-    duration: "4:15",
+    duration: "5:19",
     youtubeUrl: "#",
     tonality: "Cm",
     musicians: [
       { name: "Lera Rawlick", instrument: "vocals" },
-      { name: "Mikhail", instrument: "guitar" },
-      { name: "Арт", instrument: "synth" },
+      { name: "Mikhail", instrument: "electricGuitar" },
+      { name: "Арт", instrument: "piano" },
       { name: "Вика", instrument: "bass" },
       { name: "Миша", instrument: "drums" }
     ]
@@ -562,8 +562,8 @@ export const songs: Song[] = [
     tonality: "Am",
     musicians: [
       { name: "Lera Rawlick", instrument: "vocals" },
-      { name: "Mikhail", instrument: "guitar" },
-      { name: "Арт", instrument: "synth" },
+      { name: "Mikhail", instrument: "electricGuitar" },
+      { name: "Арт", instrument: "piano" },
       { name: "Вика", instrument: "bass" },
       { name: "Миша", instrument: "drums" }
     ]
@@ -578,8 +578,8 @@ export const songs: Song[] = [
     tonality: "C",
     musicians: [
       { name: "Lera Rawlick", instrument: "vocals" },
-      { name: "Mikhail", instrument: "guitar" },
-      { name: "Арт", instrument: "synth" },
+      { name: "Mikhail", instrument: "electricGuitar" },
+      { name: "Арт", instrument: "piano" },
       { name: "Вика", instrument: "bass" },
       { name: "Миша", instrument: "drums" }
     ]
@@ -591,7 +591,7 @@ export const songs: Song[] = [
     bandId: "9",
     trackNumber: 1,
     title: "Skin To Bone - Lost in Disguise",
-    duration: "3:45",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -607,7 +607,7 @@ export const songs: Song[] = [
     bandId: "9",
     trackNumber: 2,
     title: "Skin To Bone - ICAN'TSLEEP",
-    duration: "3:20",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -639,7 +639,7 @@ export const songs: Song[] = [
     bandId: "9",
     trackNumber: 4,
     title: "Skin To Bone - From The Ashes Of Hope",
-    duration: "3:55",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -655,7 +655,7 @@ export const songs: Song[] = [
     bandId: "9",
     trackNumber: 5,
     title: "Skin To Bone - Leeches",
-    duration: "3:30",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -673,7 +673,7 @@ export const songs: Song[] = [
     bandId: "10",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -683,7 +683,7 @@ export const songs: Song[] = [
     bandId: "10",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -693,7 +693,7 @@ export const songs: Song[] = [
     bandId: "10",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -703,7 +703,7 @@ export const songs: Song[] = [
     bandId: "10",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -713,7 +713,7 @@ export const songs: Song[] = [
     bandId: "10",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -725,7 +725,7 @@ export const songs: Song[] = [
     bandId: "11",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -735,7 +735,7 @@ export const songs: Song[] = [
     bandId: "11",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -745,7 +745,7 @@ export const songs: Song[] = [
     bandId: "11",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -755,7 +755,7 @@ export const songs: Song[] = [
     bandId: "11",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -765,7 +765,7 @@ export const songs: Song[] = [
     bandId: "11",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -777,12 +777,12 @@ export const songs: Song[] = [
     bandId: "12",
     trackNumber: 1,
     title: "W.A.S.P. - I Wanna Be Somebody",
-    duration: "3:45",
+    duration: "3:44",
     youtubeUrl: "https://www.youtube.com/watch?v=LA3ID178XLE",
     tonality: "-",
     musicians: [
       { name: "Маша", instrument: "vocals" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Иван", instrument: "electricGuitar" },
       { name: "Илья", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -797,8 +797,8 @@ export const songs: Song[] = [
     tonality: "+1",
     musicians: [
       { name: "Маша", instrument: "vocals" },
-      { name: "Jene", instrument: "guitar" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Jene", instrument: "acoustic" },
+      { name: "Иван", instrument: "electricGuitar" },
       { name: "Илья", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -808,12 +808,12 @@ export const songs: Song[] = [
     bandId: "12",
     trackNumber: 3,
     title: "Skid Row - Big Guns",
-    duration: "3:37",
+    duration: "3:38",
     youtubeUrl: "https://www.youtube.com/watch?v=Bh5MzIQrkBo",
     tonality: "-",
     musicians: [
       { name: "Маша", instrument: "vocals" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Иван", instrument: "electricGuitar" },
       { name: "Илья", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -823,13 +823,13 @@ export const songs: Song[] = [
     bandId: "12",
     trackNumber: 4,
     title: "Ария - Возьми мое сердце",
-    duration: "5:15",
+    duration: "4:05",
     youtubeUrl: "https://www.youtube.com/watch?v=MTuS78tqkkY",
     tonality: "-",
     musicians: [
       { name: "Маша", instrument: "vocals" },
-      { name: "Иван", instrument: "guitar" },
-      { name: "Jene", instrument: "guitar" },
+      { name: "Иван", instrument: "electricGuitar" },
+      { name: "Jene", instrument: "electricGuitar2" },
       { name: "Илья", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -839,12 +839,12 @@ export const songs: Song[] = [
     bandId: "12",
     trackNumber: 5,
     title: "Slaughter - Get Used To It",
-    duration: "3:15",
+    duration: "4:00",
     youtubeUrl: "https://www.youtube.com/watch?v=r2ZzWL2blP0",
     tonality: "-",
     musicians: [
       { name: "Маша", instrument: "vocals" },
-      { name: "Иван", instrument: "guitar" },
+      { name: "Иван", instrument: "electricGuitar" },
       { name: "Илья", instrument: "bass" },
       { name: "Арт", instrument: "drums" }
     ]
@@ -856,7 +856,7 @@ export const songs: Song[] = [
     bandId: "13",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -868,7 +868,7 @@ export const songs: Song[] = [
     bandId: "13",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -880,7 +880,7 @@ export const songs: Song[] = [
     bandId: "13",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -892,7 +892,7 @@ export const songs: Song[] = [
     bandId: "13",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -904,7 +904,7 @@ export const songs: Song[] = [
     bandId: "13",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -918,7 +918,7 @@ export const songs: Song[] = [
     bandId: "14",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -928,7 +928,7 @@ export const songs: Song[] = [
     bandId: "14",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -938,7 +938,7 @@ export const songs: Song[] = [
     bandId: "14",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -948,7 +948,7 @@ export const songs: Song[] = [
     bandId: "14",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -958,7 +958,7 @@ export const songs: Song[] = [
     bandId: "14",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -970,7 +970,7 @@ export const songs: Song[] = [
     bandId: "15",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -982,7 +982,7 @@ export const songs: Song[] = [
     bandId: "15",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -996,7 +996,7 @@ export const songs: Song[] = [
     bandId: "16",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1006,7 +1006,7 @@ export const songs: Song[] = [
     bandId: "16",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1016,7 +1016,7 @@ export const songs: Song[] = [
     bandId: "16",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1026,7 +1026,7 @@ export const songs: Song[] = [
     bandId: "16",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1036,7 +1036,7 @@ export const songs: Song[] = [
     bandId: "16",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1048,7 +1048,7 @@ export const songs: Song[] = [
     bandId: "17",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1058,7 +1058,7 @@ export const songs: Song[] = [
     bandId: "17",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1068,7 +1068,7 @@ export const songs: Song[] = [
     bandId: "17",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1078,7 +1078,7 @@ export const songs: Song[] = [
     bandId: "17",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1088,7 +1088,7 @@ export const songs: Song[] = [
     bandId: "17",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1100,7 +1100,7 @@ export const songs: Song[] = [
     bandId: "18",
     trackNumber: 1,
     title: "Gary Clark Jr. - Come Together",
-    duration: "4:20",
+    duration: "3:13",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1116,7 +1116,7 @@ export const songs: Song[] = [
     bandId: "18",
     trackNumber: 2,
     title: "Pink Floyd - Another Brick In The Wall",
-    duration: "3:59",
+    duration: "3:58",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1132,7 +1132,7 @@ export const songs: Song[] = [
     bandId: "18",
     trackNumber: 3,
     title: "ZZ Top - La Grange",
-    duration: "3:51",
+    duration: "4:41",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1163,8 +1163,8 @@ export const songs: Song[] = [
     id: "18-5",
     bandId: "18",
     trackNumber: 5,
-    title: "Joe Cocker - You Can Leave Your Head On",
-    duration: "4:23",
+    title: "Joe Cocker - You Can Leave Your Hat On",
+    duration: "4:15",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1182,7 +1182,7 @@ export const songs: Song[] = [
     bandId: "19",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1192,7 +1192,7 @@ export const songs: Song[] = [
     bandId: "19",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1202,7 +1202,7 @@ export const songs: Song[] = [
     bandId: "19",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1212,7 +1212,7 @@ export const songs: Song[] = [
     bandId: "19",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1222,7 +1222,7 @@ export const songs: Song[] = [
     bandId: "19",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1234,7 +1234,7 @@ export const songs: Song[] = [
     bandId: "20",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1249,7 +1249,7 @@ export const songs: Song[] = [
     bandId: "20",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1264,7 +1264,7 @@ export const songs: Song[] = [
     bandId: "20",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1279,7 +1279,7 @@ export const songs: Song[] = [
     bandId: "20",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1294,7 +1294,7 @@ export const songs: Song[] = [
     bandId: "20",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
@@ -1311,7 +1311,7 @@ export const songs: Song[] = [
     bandId: "21",
     trackNumber: 1,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1321,7 +1321,7 @@ export const songs: Song[] = [
     bandId: "21",
     trackNumber: 2,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1331,7 +1331,7 @@ export const songs: Song[] = [
     bandId: "21",
     trackNumber: 3,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1341,7 +1341,7 @@ export const songs: Song[] = [
     bandId: "21",
     trackNumber: 4,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1351,7 +1351,7 @@ export const songs: Song[] = [
     bandId: "21",
     trackNumber: 5,
     title: "? - ?",
-    duration: "3:00",
+    duration: "4:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: []
@@ -1412,4 +1412,103 @@ export function getSongsByMusicianGroupedByBand(musicianName: string): SongsByBa
   });
   
   return result;
+}
+
+function parseDuration(duration: string): number {
+  const parts = duration.split(':');
+  const minutes = parseInt(parts[0], 10);
+  const seconds = parseInt(parts[1], 10);
+  return minutes * 60 + seconds;
+}
+
+function formatDuration(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  
+  if (hours > 0) {
+    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+
+export function getTotalDuration(songList: Song[]): string {
+  const totalSeconds = songList.reduce((acc, song) => {
+    return acc + parseDuration(song.duration);
+  }, 0);
+  return formatDuration(totalSeconds);
+}
+
+export function getAllSongsTotalDuration(): string {
+  return getTotalDuration(songs);
+}
+
+export function getAllUniqueMusicians(): string[] {
+  const musicianSet = new Set<string>();
+  songs.forEach(song => {
+    song.musicians.forEach(m => {
+      musicianSet.add(m.name);
+    });
+  });
+  return Array.from(musicianSet).sort();
+}
+
+const musicianColorPalette = [
+  "bg-cyan-500 text-white",
+  "bg-indigo-500 text-white",
+  "bg-violet-500 text-white",
+  "bg-fuchsia-500 text-white",
+  "bg-rose-500 text-white",
+  "bg-pink-500 text-white",
+  "bg-purple-500 text-white",
+  "bg-blue-500 text-white",
+  "bg-sky-500 text-white",
+  "bg-teal-500 text-white",
+  "bg-emerald-500 text-white",
+  "bg-green-500 text-white",
+  "bg-lime-500 text-white",
+  "bg-yellow-500 text-white",
+  "bg-amber-500 text-white",
+  "bg-orange-500 text-white",
+  "bg-red-500 text-white",
+  "bg-slate-500 text-white",
+  "bg-gray-500 text-white",
+  "bg-zinc-500 text-white"
+];
+
+export function getMusicianColor(musicianName: string): string {
+  const allMusicians = getAllUniqueMusicians();
+  const index = allMusicians.indexOf(musicianName);
+  if (index === -1) return "bg-gray-500 text-white";
+  return musicianColorPalette[index % musicianColorPalette.length];
+}
+
+import rockImage from '@assets/stock_images/electric_guitar_ampl_f2f2a3df.jpg';
+import metalImage from '@assets/stock_images/heavy_metal_concert__e0730810.jpg';
+import acousticImage from '@assets/stock_images/acoustic_guitar_sing_af70b75b.jpg';
+import soulImage from '@assets/stock_images/microphone_stage_spo_70cf1786.jpg';
+import alternativeImage from '@assets/stock_images/grunge_alternative_r_2fb973d5.jpg';
+import classicRockImage from '@assets/stock_images/classic_rock_blues_g_0ee73ada.jpg';
+import vinylImage from '@assets/stock_images/vintage_vinyl_record_65a04b43.jpg';
+
+const bandBackgroundImages: Record<string, string> = {
+  "4": rockImage,
+  "5": rockImage,
+  "6": metalImage,
+  "7": acousticImage,
+  "8": soulImage,
+  "9": alternativeImage,
+  "12": vinylImage,
+  "18": classicRockImage
+};
+
+export function getBandBackgroundImage(bandId: string): string | undefined {
+  const bandSongs = getSongsByBandId(bandId);
+  const hasRealSongs = bandSongs.some(song => song.title !== "? - ?");
+  
+  if (!hasRealSongs) {
+    return undefined;
+  }
+  
+  return bandBackgroundImages[bandId];
 }
