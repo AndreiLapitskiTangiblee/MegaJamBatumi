@@ -2,12 +2,28 @@ import { Band, Song } from "@shared/schema";
 
 export const bands: Band[] = [
   {
-    id: "7",
-    name: "Миша Павлов",
-    genre: "Singer-Songwriter",
-    formed: 2020,
+    id: "1",
+    name: "Варя",
+    genre: "Various",
+    formed: 2023,
     origin: "Batumi, Georgia",
-    description: "Solo acoustic performer"
+    description: "Performer"
+  },
+  {
+    id: "2",
+    name: "Артем",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "3",
+    name: "Alexa",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
   },
   {
     id: "4",
@@ -34,6 +50,14 @@ export const bands: Band[] = [
     description: "Heavy rock and metal covers"
   },
   {
+    id: "7",
+    name: "Миша Павлов",
+    genre: "Singer-Songwriter",
+    formed: 2020,
+    origin: "Batumi, Georgia",
+    description: "Solo acoustic performer"
+  },
+  {
     id: "8",
     name: "Lera Rawlick",
     genre: "Pop / Soul",
@@ -50,6 +74,22 @@ export const bands: Band[] = [
     description: "Skin To Bone original music"
   },
   {
+    id: "10",
+    name: "Jindiff",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "11",
+    name: "Витя",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
     id: "12",
     name: "Маша",
     genre: "Metal / Hard Rock",
@@ -58,84 +98,223 @@ export const bands: Band[] = [
     description: "80s metal and rock classics"
   },
   {
+    id: "13",
+    name: "Баржулька",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "14",
+    name: "Кир",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "15",
+    name: "Котoff",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "16",
+    name: "Сергей Клевер",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "17",
+    name: "Алина",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
     id: "18",
     name: "Mikhail",
     genre: "Blues / Rock",
     formed: 2023,
     origin: "Batumi, Georgia",
     description: "Classic rock and blues covers"
+  },
+  {
+    id: "19",
+    name: "Ира",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "20",
+    name: "Сергей",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
+  },
+  {
+    id: "21",
+    name: "Олег",
+    genre: "Various",
+    formed: 2023,
+    origin: "Batumi, Georgia",
+    description: "Performer"
   }
 ];
 
 export const songs: Song[] = [
-  // Миша Павлов
+  // Варя (id: 1)
   {
-    id: "7-1",
-    bandId: "7",
+    id: "1-1",
+    bandId: "1",
     trackNumber: 1,
-    title: "Миша Павлов - Батоно Батуми",
-    duration: "3:30",
+    title: "? - ?",
+    duration: "3:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
-      { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
+      { name: "Арт", instrument: "synth" }
     ]
   },
   {
-    id: "7-2",
-    bandId: "7",
+    id: "1-2",
+    bandId: "1",
     trackNumber: 2,
-    title: "Миша Павлов - Поменяй у кота песок",
-    duration: "3:30",
+    title: "TBD",
+    duration: "3:00",
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
-      { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
+      { name: "Арт", instrument: "synth" }
     ]
   },
   {
-    id: "7-3",
-    bandId: "7",
+    id: "1-3",
+    bandId: "1",
     trackNumber: 3,
-    title: "Миша Павлов - С тобой рядом",
-    duration: "3:30",
+    title: "TBD",
+    duration: "3:00",
     youtubeUrl: "#",
     tonality: "-",
-    musicians: [
-      { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
-    ]
+    musicians: []
   },
   {
-    id: "7-4",
-    bandId: "7",
+    id: "1-4",
+    bandId: "1",
     trackNumber: 4,
-    title: "Миша Павлов - Не бойся за меня",
-    duration: "3:30",
+    title: "TBD",
+    duration: "3:00",
     youtubeUrl: "#",
     tonality: "-",
-    musicians: [
-      { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
-    ]
-  },
-  {
-    id: "7-5",
-    bandId: "7",
-    trackNumber: 5,
-    title: "Миша Павлов - Он сказал и ушел",
-    duration: "3:30",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: [
-      { name: "Миша Павлов", instrument: "vocals" },
-      { name: "Миша Павлов", instrument: "guitar" }
-    ]
+    musicians: []
   },
 
-  // Vladimir J
+  // Артем (id: 2)
+  {
+    id: "2-1",
+    bandId: "2",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Арт", instrument: "synth" }
+    ]
+  },
+  {
+    id: "2-2",
+    bandId: "2",
+    trackNumber: 2,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "2-3",
+    bandId: "2",
+    trackNumber: 3,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "2-4",
+    bandId: "2",
+    trackNumber: 4,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Alexa (id: 3)
+  {
+    id: "3-1",
+    bandId: "3",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "3-2",
+    bandId: "3",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "3-3",
+    bandId: "3",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "3-4",
+    bandId: "3",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "3-5",
+    bandId: "3",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Vladimir J (id: 4)
   {
     id: "4-1",
     bandId: "4",
@@ -218,7 +397,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Лиля
+  // Лиля (id: 5)
   {
     id: "5-1",
     bandId: "5",
@@ -236,8 +415,38 @@ export const songs: Song[] = [
       { name: "Арт", instrument: "drums" }
     ]
   },
+  {
+    id: "5-2",
+    bandId: "5",
+    trackNumber: 2,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "5-3",
+    bandId: "5",
+    trackNumber: 3,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "5-4",
+    bandId: "5",
+    trackNumber: 4,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
 
-  // Ivan T.
+  // Ivan T. (id: 6)
   {
     id: "6-1",
     bandId: "6",
@@ -319,7 +528,74 @@ export const songs: Song[] = [
     ]
   },
 
-  // Lera Rawlick
+  // Миша Павлов (id: 7)
+  {
+    id: "7-1",
+    bandId: "7",
+    trackNumber: 1,
+    title: "Миша Павлов - Батоно Батуми",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+  {
+    id: "7-2",
+    bandId: "7",
+    trackNumber: 2,
+    title: "Миша Павлов - Поменяй у кота песок",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+  {
+    id: "7-3",
+    bandId: "7",
+    trackNumber: 3,
+    title: "Миша Павлов - С тобой рядом",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+  {
+    id: "7-4",
+    bandId: "7",
+    trackNumber: 4,
+    title: "Миша Павлов - Не бойся за меня",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+  {
+    id: "7-5",
+    bandId: "7",
+    trackNumber: 5,
+    title: "Миша Павлов - Он сказал и ушел",
+    duration: "3:30",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Миша Павлов", instrument: "vocals" },
+      { name: "Миша Павлов", instrument: "guitar" }
+    ]
+  },
+
+  // Lera Rawlick (id: 8)
   {
     id: "8-1",
     bandId: "8",
@@ -401,7 +677,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Давут (Skin To Bone originals)
+  // Давут (id: 9)
   {
     id: "9-1",
     bandId: "9",
@@ -483,7 +759,111 @@ export const songs: Song[] = [
     ]
   },
 
-  // Маша
+  // Jindiff (id: 10)
+  {
+    id: "10-1",
+    bandId: "10",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "10-2",
+    bandId: "10",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "10-3",
+    bandId: "10",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "10-4",
+    bandId: "10",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "10-5",
+    bandId: "10",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Витя (id: 11)
+  {
+    id: "11-1",
+    bandId: "11",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "11-2",
+    bandId: "11",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "11-3",
+    bandId: "11",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "11-4",
+    bandId: "11",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "11-5",
+    bandId: "11",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Маша (id: 12)
   {
     id: "12-1",
     bandId: "12",
@@ -562,7 +942,291 @@ export const songs: Song[] = [
     ]
   },
 
-  // Mikhail
+  // Баржулька (id: 13)
+  {
+    id: "13-1",
+    bandId: "13",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Баржулька", instrument: "bass" }
+    ]
+  },
+  {
+    id: "13-2",
+    bandId: "13",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Баржулька", instrument: "bass" }
+    ]
+  },
+  {
+    id: "13-3",
+    bandId: "13",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Баржулька", instrument: "bass" }
+    ]
+  },
+  {
+    id: "13-4",
+    bandId: "13",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Баржулька", instrument: "bass" }
+    ]
+  },
+  {
+    id: "13-5",
+    bandId: "13",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Баржулька", instrument: "bass" }
+    ]
+  },
+
+  // Кир (id: 14)
+  {
+    id: "14-1",
+    bandId: "14",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "14-2",
+    bandId: "14",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "14-3",
+    bandId: "14",
+    trackNumber: 3,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "14-4",
+    bandId: "14",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "14-5",
+    bandId: "14",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "14-6",
+    bandId: "14",
+    trackNumber: 6,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Котoff (id: 15)
+  {
+    id: "15-1",
+    bandId: "15",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Баржулька", instrument: "bass" }
+    ]
+  },
+  {
+    id: "15-2",
+    bandId: "15",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Баржулька", instrument: "bass" }
+    ]
+  },
+  {
+    id: "15-3",
+    bandId: "15",
+    trackNumber: 3,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "15-4",
+    bandId: "15",
+    trackNumber: 4,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "15-5",
+    bandId: "15",
+    trackNumber: 5,
+    title: "TBD",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Сергей Клевер (id: 16)
+  {
+    id: "16-1",
+    bandId: "16",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "16-2",
+    bandId: "16",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "16-3",
+    bandId: "16",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "16-4",
+    bandId: "16",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "16-5",
+    bandId: "16",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Алина (id: 17)
+  {
+    id: "17-1",
+    bandId: "17",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "17-2",
+    bandId: "17",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "17-3",
+    bandId: "17",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "17-4",
+    bandId: "17",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "17-5",
+    bandId: "17",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Mikhail (id: 18)
   {
     id: "18-1",
     bandId: "18",
@@ -642,6 +1306,182 @@ export const songs: Song[] = [
       { name: "Вика", instrument: "bass" },
       { name: "Дима", instrument: "drums" }
     ]
+  },
+
+  // Ира (id: 19)
+  {
+    id: "19-1",
+    bandId: "19",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "19-2",
+    bandId: "19",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "19-3",
+    bandId: "19",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "19-4",
+    bandId: "19",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "19-5",
+    bandId: "19",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+
+  // Сергей (id: 20)
+  {
+    id: "20-1",
+    bandId: "20",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Илья", instrument: "drums" }
+    ]
+  },
+  {
+    id: "20-2",
+    bandId: "20",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Илья", instrument: "drums" }
+    ]
+  },
+  {
+    id: "20-3",
+    bandId: "20",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Илья", instrument: "drums" }
+    ]
+  },
+  {
+    id: "20-4",
+    bandId: "20",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Илья", instrument: "drums" }
+    ]
+  },
+  {
+    id: "20-5",
+    bandId: "20",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: [
+      { name: "Евгений", instrument: "guitar" },
+      { name: "Vitaly", instrument: "bass" },
+      { name: "Илья", instrument: "drums" }
+    ]
+  },
+
+  // Олег (id: 21)
+  {
+    id: "21-1",
+    bandId: "21",
+    trackNumber: 1,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "21-2",
+    bandId: "21",
+    trackNumber: 2,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "21-3",
+    bandId: "21",
+    trackNumber: 3,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "21-4",
+    bandId: "21",
+    trackNumber: 4,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
+  },
+  {
+    id: "21-5",
+    bandId: "21",
+    trackNumber: 5,
+    title: "? - ?",
+    duration: "3:00",
+    youtubeUrl: "#",
+    tonality: "-",
+    musicians: []
   }
 ];
 
