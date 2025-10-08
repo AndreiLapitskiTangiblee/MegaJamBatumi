@@ -172,7 +172,7 @@ export const bands: Band[] = [
 ];
 
 export const songs: Song[] = [
-  // Варя (id: 1)
+  // Варя (id: 1) - 1 song
   {
     id: "1-1",
     bandId: "1",
@@ -185,40 +185,8 @@ export const songs: Song[] = [
       { name: "Арт", instrument: "synth" }
     ]
   },
-  {
-    id: "1-2",
-    bandId: "1",
-    trackNumber: 2,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: [
-      { name: "Арт", instrument: "synth" }
-    ]
-  },
-  {
-    id: "1-3",
-    bandId: "1",
-    trackNumber: 3,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
-  {
-    id: "1-4",
-    bandId: "1",
-    trackNumber: 4,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
 
-  // Артем (id: 2)
+  // Артем (id: 2) - 1 song
   {
     id: "2-1",
     bandId: "2",
@@ -231,38 +199,8 @@ export const songs: Song[] = [
       { name: "Арт", instrument: "synth" }
     ]
   },
-  {
-    id: "2-2",
-    bandId: "2",
-    trackNumber: 2,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
-  {
-    id: "2-3",
-    bandId: "2",
-    trackNumber: 3,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
-  {
-    id: "2-4",
-    bandId: "2",
-    trackNumber: 4,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
 
-  // Alexa (id: 3)
+  // Alexa (id: 3) - 5 songs
   {
     id: "3-1",
     bandId: "3",
@@ -314,7 +252,7 @@ export const songs: Song[] = [
     musicians: []
   },
 
-  // Vladimir J (id: 4)
+  // Vladimir J (id: 4) - 5 songs
   {
     id: "4-1",
     bandId: "4",
@@ -397,7 +335,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Лиля (id: 5)
+  // Лиля (id: 5) - 1 song
   {
     id: "5-1",
     bandId: "5",
@@ -415,38 +353,8 @@ export const songs: Song[] = [
       { name: "Арт", instrument: "drums" }
     ]
   },
-  {
-    id: "5-2",
-    bandId: "5",
-    trackNumber: 2,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
-  {
-    id: "5-3",
-    bandId: "5",
-    trackNumber: 3,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
-  {
-    id: "5-4",
-    bandId: "5",
-    trackNumber: 4,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
 
-  // Ivan T. (id: 6)
+  // Ivan T. (id: 6) - 5 songs
   {
     id: "6-1",
     bandId: "6",
@@ -528,7 +436,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Миша Павлов (id: 7)
+  // Миша Павлов (id: 7) - 5 songs
   {
     id: "7-1",
     bandId: "7",
@@ -595,7 +503,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Lera Rawlick (id: 8)
+  // Lera Rawlick (id: 8) - 5 songs
   {
     id: "8-1",
     bandId: "8",
@@ -677,7 +585,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Давут (id: 9)
+  // Давут (id: 9) - 5 songs
   {
     id: "9-1",
     bandId: "9",
@@ -759,7 +667,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Jindiff (id: 10)
+  // Jindiff (id: 10) - 5 songs
   {
     id: "10-1",
     bandId: "10",
@@ -811,7 +719,7 @@ export const songs: Song[] = [
     musicians: []
   },
 
-  // Витя (id: 11)
+  // Витя (id: 11) - 5 songs
   {
     id: "11-1",
     bandId: "11",
@@ -863,7 +771,7 @@ export const songs: Song[] = [
     musicians: []
   },
 
-  // Маша (id: 12)
+  // Маша (id: 12) - 5 songs
   {
     id: "12-1",
     bandId: "12",
@@ -942,7 +850,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Баржулька (id: 13)
+  // Баржулька (id: 13) - 5 songs
   {
     id: "13-1",
     bandId: "13",
@@ -1004,7 +912,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Кир (id: 14)
+  // Кир (id: 14) - 5 songs (excluding empty songName)
   {
     id: "14-1",
     bandId: "14",
@@ -1029,7 +937,7 @@ export const songs: Song[] = [
     id: "14-3",
     bandId: "14",
     trackNumber: 3,
-    title: "TBD",
+    title: "? - ?",
     duration: "3:00",
     youtubeUrl: "#",
     tonality: "-",
@@ -1055,18 +963,8 @@ export const songs: Song[] = [
     tonality: "-",
     musicians: []
   },
-  {
-    id: "14-6",
-    bandId: "14",
-    trackNumber: 6,
-    title: "? - ?",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
 
-  // Котoff (id: 15)
+  // Котoff (id: 15) - 2 songs (excluding empty songName)
   {
     id: "15-1",
     bandId: "15",
@@ -1091,38 +989,8 @@ export const songs: Song[] = [
       { name: "Баржулька", instrument: "bass" }
     ]
   },
-  {
-    id: "15-3",
-    bandId: "15",
-    trackNumber: 3,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
-  {
-    id: "15-4",
-    bandId: "15",
-    trackNumber: 4,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
-  {
-    id: "15-5",
-    bandId: "15",
-    trackNumber: 5,
-    title: "TBD",
-    duration: "3:00",
-    youtubeUrl: "#",
-    tonality: "-",
-    musicians: []
-  },
 
-  // Сергей Клевер (id: 16)
+  // Сергей Клевер (id: 16) - 5 songs
   {
     id: "16-1",
     bandId: "16",
@@ -1174,7 +1042,7 @@ export const songs: Song[] = [
     musicians: []
   },
 
-  // Алина (id: 17)
+  // Алина (id: 17) - 5 songs
   {
     id: "17-1",
     bandId: "17",
@@ -1226,7 +1094,7 @@ export const songs: Song[] = [
     musicians: []
   },
 
-  // Mikhail (id: 18)
+  // Mikhail (id: 18) - 5 songs
   {
     id: "18-1",
     bandId: "18",
@@ -1308,7 +1176,7 @@ export const songs: Song[] = [
     ]
   },
 
-  // Ира (id: 19)
+  // Ира (id: 19) - 5 songs
   {
     id: "19-1",
     bandId: "19",
@@ -1360,7 +1228,7 @@ export const songs: Song[] = [
     musicians: []
   },
 
-  // Сергей (id: 20)
+  // Сергей (id: 20) - 5 songs
   {
     id: "20-1",
     bandId: "20",
@@ -1370,6 +1238,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Сергей", instrument: "vocals" },
       { name: "Евгений", instrument: "guitar" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Илья", instrument: "drums" }
@@ -1384,6 +1253,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Сергей", instrument: "vocals" },
       { name: "Евгений", instrument: "guitar" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Илья", instrument: "drums" }
@@ -1398,6 +1268,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Сергей", instrument: "vocals" },
       { name: "Евгений", instrument: "guitar" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Илья", instrument: "drums" }
@@ -1412,6 +1283,7 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Сергей", instrument: "vocals" },
       { name: "Евгений", instrument: "guitar" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Илья", instrument: "drums" }
@@ -1426,13 +1298,14 @@ export const songs: Song[] = [
     youtubeUrl: "#",
     tonality: "-",
     musicians: [
+      { name: "Сергей", instrument: "vocals" },
       { name: "Евгений", instrument: "guitar" },
       { name: "Vitaly", instrument: "bass" },
       { name: "Илья", instrument: "drums" }
     ]
   },
 
-  // Олег (id: 21)
+  // Олег (id: 21) - 5 songs
   {
     id: "21-1",
     bandId: "21",
