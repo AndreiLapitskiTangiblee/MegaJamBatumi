@@ -31,31 +31,31 @@ export default function SongsTable() {
       <table className="w-full border-collapse" data-testid="table-songs">
         <thead>
           <tr className="border-b-2 border-border bg-muted/50">
-            <th className="text-left p-2 sm:p-3 font-semibold sticky left-0 bg-muted/50 z-10 border-r border-border min-w-[80px]">Song</th>
-            <th className="text-left p-2 sm:p-3 font-semibold min-w-[50px] border-r border-border">Tonality</th>
-            <th className="text-left p-2 sm:p-3 font-semibold min-w-[50px] border-r border-border">Duration</th>
-            <th className="text-center p-2 sm:p-3 font-semibold min-w-[40px] border-r border-border">YT</th>
-            <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">
+            <th className="text-left p-2 sm:p-3 font-semibold sticky left-0 bg-muted/50 z-10 border-r border-border min-w-[60px]">Song</th>
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[40px] border-r border-border">Tonality</th>
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[40px] border-r border-border">Duration</th>
+            <th className="text-center p-2 sm:p-3 font-semibold min-w-[32px] border-r border-border">YT</th>
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[50px] border-r border-border">
               <div className="flex items-center gap-1 sm:gap-2">
                 <span className="hidden sm:inline">{instrumentIcons.vocals}</span> Vocals
               </div>
             </th>
-            <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[50px] border-r border-border">
               <div className="flex items-center gap-1 sm:gap-2">
                 <span className="hidden sm:inline">{instrumentIcons.guitar}</span> Guitar
               </div>
             </th>
-            <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[50px] border-r border-border">
               <div className="flex items-center gap-1 sm:gap-2">
                 <span className="hidden sm:inline">{instrumentIcons.bass}</span> Bass
               </div>
             </th>
-            <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px] border-r border-border">
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[50px] border-r border-border">
               <div className="flex items-center gap-1 sm:gap-2">
                 <span className="hidden sm:inline">{instrumentIcons.synth}</span> Synth
               </div>
             </th>
-            <th className="text-left p-2 sm:p-3 font-semibold min-w-[70px]">
+            <th className="text-left p-2 sm:p-3 font-semibold min-w-[50px]">
               <div className="flex items-center gap-1 sm:gap-2">
                 <span className="hidden sm:inline">{instrumentIcons.drums}</span> Drums
               </div>
