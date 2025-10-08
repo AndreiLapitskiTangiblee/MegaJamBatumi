@@ -55,8 +55,11 @@ export default function BandSongs() {
         </header>
 
         <div className="space-y-3">
-          {songs.map((song) => (
-            <div key={song.id} className="bg-card rounded-lg border border-card-border">
+          {songs.map((song, index) => (
+            <div key={song.id} className="bg-card rounded-lg border border-card-border relative">
+              <div className="absolute -left-2 -top-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold z-10">
+                {index + 1}
+              </div>
               <SongCard song={song} />
             </div>
           ))}
