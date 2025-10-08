@@ -1,5 +1,5 @@
 import { Song } from "@shared/schema";
-import { ExternalLink } from "lucide-react";
+import { FaYoutube } from "react-icons/fa";
 import { useLocation } from "wouter";
 import { getMusicianColor } from "@/data/bands";
 
@@ -33,6 +33,8 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
     }
   };
 
+  const shouldShowYoutubeIcon = song.title !== "? - ?" || (song.youtubeUrl && song.youtubeUrl !== "#");
+
   return (
     <div
       className="flex items-center justify-between p-3 sm:p-4 rounded-lg border-b last:border-b-0 hover-elevate transition-colors gap-2 sm:gap-4"
@@ -47,16 +49,24 @@ export default function SongCard({ song, onMusicianClick }: SongCardProps) {
             <h3 className="text-base sm:text-lg font-medium" data-testid={`text-song-title-${song.id}`}>
               {song.title}
             </h3>
-            <a
-              href={song.youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors flex-shrink-0"
-              data-testid={`link-youtube-${song.id}`}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </a>
+            {shouldShowYoutubeIcon && (
+              <div className="flex items-center gap-1">
+                <a
+                  href={song.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 dark:text-red-500 hover:text-red-700 dark:hover:text-red-400 transition-colors flex-shrink-0"
+                  data-testid={`link-youtube-${song.id}`}
+                  onClick={(e) => e.stopPropagation()}
+                  title={song.autoFoundYoutubeUrl ? "Auto-found on YouTube" : "Watch on YouTube"}
+                >
+                  <FaYoutube className="w-6 h-6 sm:w-7 sm:h-7" />
+                </a>
+                {song.autoFoundYoutubeUrl && (
+                  <span className="text-xs text-muted-foreground italic">Auto-found</span>
+                )}
+              </div>
+            )}
           </div>
           <div className="flex items-center gap-1.5 sm:gap-2 mt-2 flex-wrap">
             {song.musicians.map((musician, index) => (

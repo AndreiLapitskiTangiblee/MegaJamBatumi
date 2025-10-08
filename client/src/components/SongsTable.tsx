@@ -1,6 +1,7 @@
 import { bands, songs } from "@/data/bands";
-import { ExternalLink } from "lucide-react";
+import { FaYoutube } from "react-icons/fa";
 import { useLocation } from "wouter";
+import { getMusicianColor } from "@/data/bands";
 
 const instrumentIcons: Record<string, string> = {
   drums: "🥁",
@@ -81,6 +82,8 @@ export default function SongsTable() {
                     return song.musicians.find(m => m.instrument === instrument);
                   };
 
+                  const shouldShowYoutubeIcon = song.title !== "? - ?" || (song.youtubeUrl && song.youtubeUrl !== "#");
+
                   return (
                     <tr 
                       key={song.id} 
@@ -95,15 +98,20 @@ export default function SongsTable() {
                       </td>
                       <td className="p-2 sm:p-3 text-muted-foreground border-r border-border text-sm sm:text-base">{song.duration}</td>
                       <td className="p-2 sm:p-3 text-center border-r border-border">
-                        <a
-                          href={song.youtubeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
-                          data-testid={`link-youtube-${song.id}`}
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
+                        {shouldShowYoutubeIcon && (
+                          <div className="flex items-center justify-center gap-1">
+                            <a
+                              href={song.youtubeUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center text-red-600 dark:text-red-500 hover:text-red-700 dark:hover:text-red-400 transition-colors"
+                              data-testid={`link-youtube-${song.id}`}
+                              title={song.autoFoundYoutubeUrl ? "Auto-found on YouTube" : "Watch on YouTube"}
+                            >
+                              <FaYoutube className="w-5 h-5 sm:w-6 sm:h-6" />
+                            </a>
+                          </div>
+                        )}
                       </td>
                       <td className="p-2 sm:p-3 border-r border-border">
                         {getMusicianForInstrument("vocals") && (

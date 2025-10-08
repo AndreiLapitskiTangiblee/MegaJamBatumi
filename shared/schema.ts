@@ -40,4 +40,5 @@ export interface Song {
   youtubeUrl: string;
   tonality: string;
   musicians: Musician[];
+  autoFoundYoutubeUrl?: boolean;
 }

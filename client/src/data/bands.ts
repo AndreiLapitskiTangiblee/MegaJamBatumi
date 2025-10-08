@@ -171,7 +171,13 @@ export const bands: Band[] = [
   }
 ];
 
-export const songs: Song[] = [
+// Helper function to generate YouTube search URL
+function generateYoutubeSearchUrl(title: string): string {
+  const searchQuery = encodeURIComponent(title);
+  return `https://www.youtube.com/results?search_query=${searchQuery}`;
+}
+
+const rawSongs: Song[] = [
   // Варя (id: 1) - 1 song
   {
     id: "1-1",
@@ -1532,3 +1538,22 @@ const bandBackgroundImages: Record<string, string> = {
 export function getBandBackgroundImage(bandId: string): string | undefined {
   return bandBackgroundImages[bandId];
 }
+
+// Process songs to add auto-found YouTube URLs
+export const songs: Song[] = rawSongs.map(song => {
+  // If title is "? - ?" or if it already has a real YouTube URL, don't modify
+  if (song.title === "? - ?" || (song.youtubeUrl && song.youtubeUrl.startsWith("https://"))) {
+    return song;
+  }
+  
+  // If title is real but youtubeUrl is "#", generate auto-found URL
+  if (song.youtubeUrl === "#") {
+    return {
+      ...song,
+      youtubeUrl: generateYoutubeSearchUrl(song.title),
+      autoFoundYoutubeUrl: true
+    };
+  }
+  
+  return song;
+});
